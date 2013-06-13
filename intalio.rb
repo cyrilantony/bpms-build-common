@@ -40,6 +40,8 @@ PXE_HA_JDBC_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors
 PXE_HA_DATABASE_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.jdbc.runtime:mar:#{PXE_HA_DATABASE_CONNECTOR_VERSION}"
 PXE_HA_WAR = "com.intalio.bpms.pxe:ode-axis2ha-war:war:#{PXE_HA_VERSION}"
 PXE_HA_XPATH_EXT = "org.intalio.tempo:tempo-processes-xpath-extensions:jar:#{PXE_HA_PROCESSES_VERSION}"
+PXE_HA_TRANSPORT_HANDLER_MAR = "com.intalio.bpms.pxe:ode-axis2-transport-handler:mar:#{PXE_HA_VERSION}"
+PXE_HA_TRANSPORT_HANDLER_JAR = "com.intalio.bpms.pxe:ode-axis2-transport-handler:jar:#{PXE_HA_VERSION}"
 TEMPO_PXE_INTEGRATION ="org.intalio.tempo:tempo-pxe-integration:jar:#{TEMPO_PXE_INTEGRATION_VERSION}"
 TEMPO_PXE_HA_INTEGRATION ="org.intalio.tempo:tempo-pxe-integration:jar:#{TEMPO_PXE_HA_INTEGRATION_VERSION}"
 TMP_PROCESS_HANDLER ="org.intalio.tmp:tmp-process-handler:mar:#{TMP_PROCESS_HANDLER_VERSION}"
@@ -328,4 +330,4 @@ TEMPO_COMMON = TEMPO[:tmscommon]
 
 TMP_CLIENT=["org.intalio.tempo.workflow.tmp:tmp-client:jar:#{TMP_CLIENT_VERSION}"]
 JSON_JAVA="org.json:json:jar:20090211"
-JETTISON = "org.codehaus.jettison:jettison:jar:1.3.3"
+JETTISON = "org.codehaus.jettison:jettison:jar:1.2"
