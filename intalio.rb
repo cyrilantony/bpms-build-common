@@ -15,7 +15,7 @@ PXE_HA_COMPONENTS =  [["database-connector",PXE_HA_DATABASE_CONNECTOR_VERSION],[
 AXIS2_COMPONENTS_EE = [["deploy-ws-service",AXIS2SERVICES_DEPLOY_WS_VERSION], ["tempo-tms-common", TEMPO_VERSION],["tempo-tms-service", TEMPO_VERSION],["tempo-tas-service-with-alfresco", TEMPO_TAS_SERVICE_WITH_ALFRESCO_VERSION], ["security-ws-service", INTALIO_SECURITY_VERSION],["bam-service", BAM_SERVICE_VERSION]]
 COMPONENTS_EE = [["pxe-ha", PXE_HA_VERSION,PXE_HA_COMPONENTS], ["console",BPMS_CONSOLE_VERSION,""],["collaboration",COLLABORATION_VERSION,""], ["monitoring", MONITORING_VERSION, ""], ["mobi", MOBI_VERSION, ""], ["bpms-dashboard",BPMS_DASHBOARD_VERSION, ""],["ode-validator", ODE_VALIDATOR_VERSION,""], ["axis2-services", AXIS2SERVICES_DEPLOY_WS_VERSION, AXIS2_COMPONENTS_EE], ["webreport", WEBREPORT_VERSION,""],["gi-webapp", GI_WEBAPP_VERSION,""],["wsi", WSI_VERSION,""],["ui-fw", UIFW_VERSION, ""],["fds", FDS_VERSION, ""],["wds", WDS_VERSION, ""], ["bre", "", BRE_COMPONENTS], ["xforms-manager", XFORMS_MANAGER_VERSION, ""] ,["apacheds-webapp", APACHEDS_WEBAPP_VERSION,""],["cas-webapp", CAS_WEBAPP_VERSION, ""],["server-common", "", ""],["tmp-process-handler", TMP_PROCESS_HANDLER_VERSION, TMP_PROCESS_HANDLER_COMPONENT]]
 DATABASE_COMPONENTS_EE = [["oracle",ORACLE_VERSION],["postgres", POSTGRES_VERSION],["db2", DB2_VERSION],["derby", DERBY_VER],["sqlserver", SQLSERVER_VERSION],["mysql", MYSQL_VERSION],["sybase", SYBASE_VERSION],["ingres", INGRES_VERSION]]
-SERVER_NAMES_EE =[["geronimo",""],["tomcat-5", TOMCAT_5_VERSION],["tomcat-6",TOMCAT_6_VERSION], ["tomcat-7",TOMCAT_7_VERSION],["jboss",JBOSS_VERSION],["jboss43",JBOSS43_VERSION],["jboss43ear",""],["jboss61ear",""],["jboss7",JBOSS7_VERSION],["weblogic9",""],["weblogic10",""]]
+SERVER_NAMES_EE =[["geronimo",""],["tomcat-5", TOMCAT_5_VERSION],["tomcat-6",TOMCAT_6_VERSION], ["tomcat-7",TOMCAT_7_VERSION],["jboss",JBOSS_VERSION],["jboss43",JBOSS43_VERSION],["jboss43ear",""],["jboss61ear",""],["jboss7",JBOSS7_VERSION],["weblogic9",""],["weblogic10",""],["jetty9",JETTY9_VERSION]]
 CHOICES_EE = [DATABASE_COMPONENTS_EE, SERVER_NAMES_EE]#Do not change the order of this. Incase an extra parrameter is added add it to the end.
 
 CHOICE_NAMES = ["database", "server"] #Do not change the order of this. Incase an extra parrameter is added add it to the end.
@@ -84,6 +84,7 @@ JBI  = group("org.apache.servicemix.specs.jbi-api-1.0", :under=>"org.apache.serv
 JBOSS = "jboss:jboss-appserver:zip:#{JBOSS_VERSION}"
 JBOSS43 ="jboss:jboss-appserver:zip:#{JBOSS43_VERSION}"
 JBOSS7 = "jboss:jboss-appserver:zip:#{JBOSS7_VERSION}"
+JETTY9 = "org.eclipse.jetty:jetty-distribution:zip:#{JETTY9_VERSION}"
 JCA = [ "javax.resource:connector-api:jar:1.5" ]
 JIBX  = "jibx:jibx-run:jar:1.1-beta3"
 SAXON = group(%w{ saxon saxon-xpath saxon-dom saxon-xqj }, :under => "net.sf.saxon", :version => "9.1.0.8")  
