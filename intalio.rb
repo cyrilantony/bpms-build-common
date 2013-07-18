@@ -116,16 +116,16 @@ WS_COMMONS          = struct(
 )
 WSDL4J_INTALIO2 = [ "wsdl4j:wsdl4j:jar:1.6.3" ]
 AXIS2_MODULES = struct(
- :mods => ["org.apache.rampart:rampart:mar:1.4",
-           "org.apache.rampart:rahas:mar:1.4",
-           "org.apache.axis2:addressing:mar:1.5.5",
-           "org.apache.axis2:mex:mar:1.5.5"],
+ :mods => ["org.apache.rampart:rampart:mar:1.7.0-SNAPSHOT",
+           "org.apache.rampart:rahas:mar:1.7.0-SNAPSHOT",
+           "org.apache.axis2:addressing:mar:1.7.0-SNAPSHOT",
+           "org.apache.axis2:mex:mar:1.7.0-SNAPSHOT"],
  :libs => [group("rampart-core", "rampart-policy", "rampart-trust",
                  :under=>"org.apache.rampart",
-                 :version=>"1.4"),
+                 :version=>"1.7.0-SNAPSHOT"),
            "org.apache.ws.security:wss4j:jar:1.5.4",
            "org.apache.santuario:xmlsec:jar:1.4.1",
-           "org.apache.axis2:mex:jar:impl:1.5.5",
+           "org.apache.axis2:mex:jar:impl:1.7.0-SNAPSHOT",
            "opensaml:opensaml:jar:1.1",
            "bouncycastle:bcprov-jdk15:jar:132",
            BACKPORT]
