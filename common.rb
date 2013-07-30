@@ -26,7 +26,7 @@ ASPECTJ = {
 :rt => "org.aspectj:aspectjrt:jar:1.6.12",
 :weaver => "org.aspectj:aspectjweaver:jar:1.6.12" 
 }
-AXIOM = group("axiom-api", "axiom-dom", "axiom-impl",:under=>"org.apache.ws.commons.axiom", :version=>"1.2.11")
+AXIOM = group("axiom-api", "axiom-dom", "axiom-impl",:under=>"org.apache.ws.commons.axiom", :version=>"1.2.13")
 BACKPORT = "backport-util-concurrent:backport-util-concurrent:jar:3.1"
 BPMS_COMMON = ["com.intalio.bpms.common:bpms-common:jar:#{BPMS_COMMON_VERSION}"]
 CASTOR = "castor:castor:jar:1.0"
@@ -95,7 +95,7 @@ JYAML = "org.jyaml:jyaml:jar:1.3"
 LIFERAY = group("portal-impl", "portal-kernel", "util-java", "portal-service",:under=>"com.liferay", :version=>"5.2.0")
 LIFT = [group("lift-core", "lift-amqp", "lift-facebook", "lift-textile","lift-webkit", "lift-widgets", "lift-xmpp",:under=>"net.liftweb",:version=>"0.8")]
 LOG4J = "log4j:log4j:jar:1.2.15"
-NEETHI = "org.apache.neethi:neethi:jar:2.0.5"
+NEETHI = "org.apache.neethi:neethi:jar:3.0.2"
 OPENSSO_CLIENT_SDK = "com.sun:openssoclientsdk:jar:3.0"
 PORTLET_API = "portlet-api:portlet-api:jar:1.0"
 QOM = "net.sf.qom:qom:jar:0.1alpha3"
@@ -191,20 +191,20 @@ APACHE_ABDERA = [
 HTTPCORE = "org.apache.httpcomponents:httpcore:jar:4.0"
 
 AXIS2 = {
-  :transporthttp => "org.apache.axis2:axis2-transport-http:jar:1.5.5",
-  :transportlocal => "org.apache.axis2:axis2-transport-local:jar:1.5.5",
-  :kernel => "org.apache.axis2:axis2-kernel:jar:1.5.5",
-  :adb => "org.apache.axis2:axis2-adb:jar:1.5.5",
-  :codegen => "org.apache.axis2:axis2-codegen:jar:1.5.5",
-  :java2wsdl => "org.apache.axis2:axis2-java2wsdl:jar:1.5.5",
-  :jibx => "org.apache.axis2:axis2-jibx:jar:1.5.5",
-  :jaxws => "org.apache.axis2:axis2-jaxws:jar:1.5.5",
-  :saaj => "org.apache.axis2:axis2-saaj:jar:1.5.5",
-  :xmlbeans => "org.apache.axis2:axis2-xmlbeans:jar:1.5.5",
-  :json => "org.apache.axis2:axis2-json:jar:1.5.5",
+  :transporthttp => "org.apache.axis2:axis2-transport-http:jar:1.6.2",
+  :transportlocal => "org.apache.axis2:axis2-transport-local:jar:1.6.2",
+  :kernel => "org.apache.axis2:axis2-kernel:jar:1.6.2",
+  :adb => "org.apache.axis2:axis2-adb:jar:1.6.2",
+  :codegen => "org.apache.axis2:axis2-codegen:jar:1.6.2",
+  :java2wsdl => "org.apache.axis2:axis2-java2wsdl:jar:1.6.2",
+  :jibx => "org.apache.axis2:axis2-jibx:jar:1.6.2",
+  :jaxws => "org.apache.axis2:axis2-jaxws:jar:1.6.2",
+  :saaj => "org.apache.axis2:axis2-saaj:jar:1.6.2",
+  :xmlbeans => "org.apache.axis2:axis2-xmlbeans:jar:1.6.2",
+  :json => "org.apache.axis2:axis2-json:jar:1.6.2",
   :transport => "org.apache.axis2:axis2-transports:jar:1.0-i6",
-  :wodenimpldom => "org.apache.woden:woden-impl-dom:jar:1.0M8",
-  :wodenapi => "org.apache.woden:woden-api:jar:1.0M8",
+  :wodenimpldom => "org.apache.woden:woden-impl-dom:jar:1.0M9",
+  :wodenapi => "org.apache.woden:woden-api:jar:1.0M9",
   :backport => BACKPORT,
   :neethi => NEETHI,
   :sunmail => SUNMAIL,

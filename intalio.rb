@@ -58,7 +58,7 @@ XFORMS_WAR = "org.intalio.tempo:xforms-manager:war:#{XFORMS_MANAGER_VERSION}"
 ANNONGEN = "annogen:annogen:jar:0.1.0"
 ANTLR = [ "antlr:antlr:jar:2.7.6" ]
 APACHE_DERBY_TOOLS = "org.apache.derby:derbytools:jar:#{DERBY_VER}"
-AXIS2_WAR = "org.apache.axis2:axis2-webapp:war:1.5.5"
+AXIS2_WAR = "org.apache.axis2:axis2-webapp:war:1.6.2"
 AXIS2BRE_WAR = "org.apache.axis2:axis2-webapp:war:1.5-i2"
 BATIK = group(%w{
   batik-awt-util  batik-bridge      batik-css       batik-dom
@@ -119,14 +119,14 @@ WSDL4J_INTALIO2 = [ "wsdl4j:wsdl4j:jar:1.6.3" ]
 AXIS2_MODULES = struct(
  :mods => ["org.apache.rampart:rampart:mar:1.4",
            "org.apache.rampart:rahas:mar:1.4",
-           "org.apache.axis2:addressing:mar:1.5.5",
-           "org.apache.axis2:mex:mar:1.5.5"],
+           "org.apache.axis2:addressing:mar:1.6.2",
+           "org.apache.axis2:mex:mar:1.6.2"],
  :libs => [group("rampart-core", "rampart-policy", "rampart-trust",
                  :under=>"org.apache.rampart",
                  :version=>"1.4"),
            "org.apache.ws.security:wss4j:jar:1.5.4",
            "org.apache.santuario:xmlsec:jar:1.4.1",
-           "org.apache.axis2:mex:jar:impl:1.5.5",
+           "org.apache.axis2:mex:jar:impl:1.6.2",
            "opensaml:opensaml:jar:1.1",
            "bouncycastle:bcprov-jdk15:jar:132",
            BACKPORT]
