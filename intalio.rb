@@ -117,18 +117,23 @@ WS_COMMONS          = struct(
 )
 WSDL4J_INTALIO2 = [ "wsdl4j:wsdl4j:jar:1.6.3" ]
 AXIS2_MODULES = struct(
- :mods => ["org.apache.rampart:rampart:mar:1.4",
-           "org.apache.rampart:rahas:mar:1.4",
+ :mods => ["org.apache.rampart:rampart:mar:1.6.2",
+           "org.apache.rampart:rahas:mar:1.6.2",
            "org.apache.axis2:addressing:mar:1.6.2",
            "org.apache.axis2:mex:mar:1.6.2"],
  :libs => [group("rampart-core", "rampart-policy", "rampart-trust",
                  :under=>"org.apache.rampart",
-                 :version=>"1.4"),
-           "org.apache.ws.security:wss4j:jar:1.5.4",
-           "org.apache.santuario:xmlsec:jar:1.4.1",
+                 :version=>"1.6.2"),
+           "org.apache.ws.security:wss4j:jar:1.6.4",
+           "org.apache.santuario:xmlsec:jar:1.4.6",
            "org.apache.axis2:mex:jar:impl:1.6.2",
-           "opensaml:opensaml:jar:1.1",
-           "bouncycastle:bcprov-jdk15:jar:132",
+           "org.opensaml:opensaml:jar:2.5.1-1",
+           "bouncycastle:bcprov-jdk15:jar:140",
+           "org.opensaml:xmltooling:jar:1.3.2-1",
+           "org.apache.velocity:velocity:jar:1.5",
+           "org.opensaml:openws:jar:1.4.2-1",
+           "org.owasp.esapi:esapi:jar:2.0GA",
+           "joda-time:joda-time:jar:1.6.2",
            BACKPORT]
 )
 TAS_ALFRESCO = group("axis", "web-service-client", "wss4j", "saaj", "bcprov-jdk15-137",  "jaxrpc",  "xalan",  "opensaml",  "xmlsec-1.4.1",  "activation",  "wsdl4j",  "mail",  :under => "alfresco", :version => "2.9.0B")
