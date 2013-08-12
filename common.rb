@@ -202,6 +202,7 @@ AXIS2 = {
   :saaj => "org.apache.axis2:axis2-saaj:jar:1.6.2",
   :xmlbeans => "org.apache.axis2:axis2-xmlbeans:jar:1.6.2",
   :json => "org.apache.axis2:axis2-json:jar:1.6.2",
+  :mtompolicy => "org.apache.axis2:axis2-mtompolicy:jar:1.6.2",
   :transport => "org.apache.axis2:axis2-transports:jar:1.0-i6",
   :wodenimpldom => "org.apache.woden:woden-impl-dom:jar:1.0M9",
   :wodenapi => "org.apache.woden:woden-api:jar:1.0M9",
