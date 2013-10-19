@@ -31,6 +31,7 @@ COLLABORATION_WAR = "com.intalio.collaboration:collaboration:war:#{COLLABORATION
 DATABASE_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.jdbc.runtime:mar:#{PXE_DATABASE_CONNECTOR_VERSION}"
 FDS_MODULE = "org.intalio.tempo:tempo-fds:mar:#{FDS_VERSION}"
 FDS_WAR = "org.intalio.tempo:tempo-fds:war:#{FDS_VERSION}"
+FDS_JAR = "org.intalio.tempo:tempo-fds:jar:#{FDS_VERSION}"
 JDBC_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.jdbc.runtime:mar:#{PXE_JDBC_CONNECTOR_VERSION}"
 MOBILE_WORKFLOW_WAR = "com.intalio.mobi:mobi:war:#{MOBI_VERSION}"
 MONITORING_WAR = "com.intalio.bpms.monitoring:intalio-bpms-monitoring-webapp:war:#{MONITORING_VERSION}"
