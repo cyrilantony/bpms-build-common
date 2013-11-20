@@ -333,6 +333,7 @@ ODE_LIBS = {
   :odejcaserver => "com.intalio.bpms.pxe:ode-jca-server:jar:#{ODE_VERSION}",
   :odetools => "com.intalio.bpms.pxe:ode-tools:jar:#{ODE_VERSION}",
   :odeutils => "com.intalio.bpms.pxe:ode-utils:jar:#{ODE_VERSION}",
+  :odebpelruntime => "com.intalio.bpms.pxe:ode-bpel-runtime:jar:#{ODE_VERSION}"
 }
 
 PXE = ODE_LIBS
