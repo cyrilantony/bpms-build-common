@@ -5,7 +5,7 @@ TMP_PROCESS_HANDLER_COMPONENT=[["security", INTALIO_SECURITY_VERSION]]
 /#FOR CE VERSION#/
 PXE_COMPONENTS =  [["database-connector",PXE_DATABASE_CONNECTOR_VERSION], ["helloworld-process",PXE_HELLOWORLD_VERSION],["jdbc-connector", PXE_JDBC_CONNECTOR_VERSION],["registry",PXE_REGISTRY_VERSION], ["tempo-pxe-integration",TEMPO_PXE_INTEGRATION_VERSION], ["workflow-processes",PXE_PROCESSES_VERSION]]
 AXIS2_COMPONENTS = [["deploy-ws-service",AXIS2SERVICES_DEPLOY_WS_VERSION],["tempo-tms-service", TEMPO_VERSION],["tempo-tas-service",TEMPO_VERSION],["security-ws-service", INTALIO_SECURITY_VERSION]]
-COMPONENTS = [["pxe",PXE_VERSION,PXE_COMPONENTS], ["console",BPMS_CONSOLE_VERSION,""], ["monitoring",MONITORING_VERSION,""], ["bpms-dashboard",BPMS_DASHBOARD_VERSION,""],["ode-validator", ODE_VALIDATOR_VERSION,""], ["axis2-services",AXIS2SERVICES_DEPLOY_WS_VERSION,AXIS2_COMPONENTS], ["gi-webapp",GI_WEBAPP_VERSION,""], ["wsi",WSI_VERSION,""], ["ui-fw",UIFW_VERSION,""], ["wds", WDS_VERSION,""], ["xforms-manager",XFORMS_MANAGER_VERSION, ""],["tomcat-5",TOMCAT_5_VERSION,""],["server-common","",""],["tmp-process-handler", TMP_PROCESS_HANDLER_VERSION,TMP_PROCESS_HANDLER_COMPONENT], ["social", SOCIAL_VERSION, ""], ["bpms-console", BPMS_CONSOLE_VERSION, ""]]
+COMPONENTS = [["pxe",PXE_VERSION,PXE_COMPONENTS], ["bpms-dashboard",BPMS_DASHBOARD_VERSION,""],["ode-validator", ODE_VALIDATOR_VERSION,""], ["axis2-services",AXIS2SERVICES_DEPLOY_WS_VERSION,AXIS2_COMPONENTS], ["gi-webapp",GI_WEBAPP_VERSION,""], ["wsi",WSI_VERSION,""], ["ui-fw",UIFW_VERSION,""], ["wds", WDS_VERSION,""], ["xforms-manager",XFORMS_MANAGER_VERSION, ""],["tomcat-5",TOMCAT_5_VERSION,""],["server-common","",""],["tmp-process-handler", TMP_PROCESS_HANDLER_VERSION,TMP_PROCESS_HANDLER_COMPONENT], ["social", SOCIAL_VERSION, ""], ["bpms-console", BPMS_CONSOLE_VERSION, ""]]
 DATABASE_COMPONENTS = [["derby",DERBY_VER],["mysql",MYSQL_VERSION]]
 SERVER_NAMES =[["tomcat-5",TOMCAT_5_VERSION]]
 CHOICES = [DATABASE_COMPONENTS, SERVER_NAMES]#Do not change the order of this. Incase an extra parrameter is added add it to the end.
@@ -13,7 +13,7 @@ CHOICES = [DATABASE_COMPONENTS, SERVER_NAMES]#Do not change the order of this. I
 /#FOR EE VERSION#/
 PXE_HA_COMPONENTS =  [["database-connector",PXE_HA_DATABASE_CONNECTOR_VERSION],["helloworld-process",PXE_HA_HELLOWORLD_VERSION],["jdbc-connector", PXE_HA_JDBC_CONNECTOR_VERSION],["registry",PXE_HA_REGISTRY_VERSION],["tempo-pxe-integration",TEMPO_PXE_HA_INTEGRATION_VERSION], ["workflow-processes", PXE_HA_PROCESSES_VERSION]]
 AXIS2_COMPONENTS_EE = [["deploy-ws-service",AXIS2SERVICES_DEPLOY_WS_VERSION], ["tempo-tms-common", TEMPO_VERSION],["tempo-tms-service", TEMPO_VERSION],["tempo-tas-service-with-alfresco", TEMPO_TAS_SERVICE_WITH_ALFRESCO_VERSION], ["security-ws-service", INTALIO_SECURITY_VERSION],["bam-service", BAM_SERVICE_VERSION]]
-COMPONENTS_EE = [["pxe-ha", PXE_HA_VERSION,PXE_HA_COMPONENTS], ["console",BPMS_CONSOLE_VERSION,""],["collaboration",COLLABORATION_VERSION,""], ["monitoring", MONITORING_VERSION, ""], ["mobi", MOBI_VERSION, ""], ["bpms-dashboard",BPMS_DASHBOARD_VERSION, ""],["ode-validator", ODE_VALIDATOR_VERSION,""], ["axis2-services", AXIS2SERVICES_DEPLOY_WS_VERSION, AXIS2_COMPONENTS_EE], ["webreport", WEBREPORT_VERSION,""],["gi-webapp", GI_WEBAPP_VERSION,""],["wsi", WSI_VERSION,""],["ui-fw", UIFW_VERSION, ""],["fds", FDS_VERSION, ""],["wds", WDS_VERSION, ""], ["bre", "", BRE_COMPONENTS], ["xforms-manager", XFORMS_MANAGER_VERSION, ""] ,["apacheds-webapp", APACHEDS_WEBAPP_VERSION,""],["cas-webapp", CAS_WEBAPP_VERSION, ""],["server-common", "", ""],["tmp-process-handler", TMP_PROCESS_HANDLER_VERSION, TMP_PROCESS_HANDLER_COMPONENT], ["social", SOCIAL_VERSION, ""], ["bpms-console", BPMS_CONSOLE_VERSION, ""]]
+COMPONENTS_EE = [["pxe-ha", PXE_HA_VERSION,PXE_HA_COMPONENTS],["collaboration",COLLABORATION_VERSION,""], ["mobi", MOBI_VERSION, ""], ["bpms-dashboard",BPMS_DASHBOARD_VERSION, ""],["ode-validator", ODE_VALIDATOR_VERSION,""], ["axis2-services", AXIS2SERVICES_DEPLOY_WS_VERSION, AXIS2_COMPONENTS_EE], ["webreport", WEBREPORT_VERSION,""],["gi-webapp", GI_WEBAPP_VERSION,""],["wsi", WSI_VERSION,""],["ui-fw", UIFW_VERSION, ""],["fds", FDS_VERSION, ""],["wds", WDS_VERSION, ""], ["bre", "", BRE_COMPONENTS], ["xforms-manager", XFORMS_MANAGER_VERSION, ""] ,["apacheds-webapp", APACHEDS_WEBAPP_VERSION,""],["cas-webapp", CAS_WEBAPP_VERSION, ""],["server-common", "", ""],["tmp-process-handler", TMP_PROCESS_HANDLER_VERSION, TMP_PROCESS_HANDLER_COMPONENT], ["social", SOCIAL_VERSION, ""], ["bpms-console", BPMS_CONSOLE_VERSION, ""]]
 DATABASE_COMPONENTS_EE = [["oracle",ORACLE_VERSION],["postgres", POSTGRES_VERSION],["db2", DB2_VERSION],["derby", DERBY_VER],["sqlserver", SQLSERVER_VERSION],["mysql", MYSQL_VERSION],["sybase", SYBASE_VERSION],["ingres", INGRES_VERSION]]
 SERVER_NAMES_EE =[["geronimo",""],["tomcat-5", TOMCAT_5_VERSION],["tomcat-6",TOMCAT_6_VERSION], ["tomcat-7",TOMCAT_7_VERSION],["jboss",JBOSS_VERSION],["jboss43",JBOSS43_VERSION],["jboss43ear",""],["jboss61ear",""],["jboss7",JBOSS7_VERSION],["weblogic9",""],["weblogic10",""],["jetty9",JETTY9_VERSION],["jbosseap6",JBOSSEAP6_VERSION]]
 CHOICES_EE = [DATABASE_COMPONENTS_EE, SERVER_NAMES_EE]#Do not change the order of this. Incase an extra parrameter is added add it to the end.
@@ -24,7 +24,6 @@ CHOICE_NAMES = ["database", "server"] #Do not change the order of this. Incase a
 
 APACHEDS_WEBAPP_WAR ="org.intalio.tempo:apacheds-webapp:war:#{APACHEDS_WEBAPP_VERSION}"
 BPMSAJAX = "com.intalio.bpms.ajax:intalioajax:zip:#{BPMSAJAX_VERSION}"
-BPMS_CONSOLE_WAR ="com.intalio.bpms.console:intalio-bpms-console-webapp:war:#{BPMS_CONSOLE_VERSION}"
 BPMS_DASHBOARD_WAR ="com.intalio.bpms.dashboard:bpms-dashboard:war:#{BPMS_DASHBOARD_VERSION}"
 CAS_WEBAPP_WAR = "org.intalio.tempo:cas-webapp:war:#{CAS_WEBAPP_VERSION}"
 COLLABORATION_WAR = "com.intalio.collaboration:collaboration:war:#{COLLABORATION_VERSION}"
@@ -34,7 +33,6 @@ FDS_WAR = "org.intalio.tempo:tempo-fds:war:#{FDS_VERSION}"
 FDS_JAR = "org.intalio.tempo:tempo-fds:jar:#{FDS_VERSION}"
 JDBC_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.jdbc.runtime:mar:#{PXE_JDBC_CONNECTOR_VERSION}"
 MOBILE_WORKFLOW_WAR = "com.intalio.mobi:mobi:war:#{MOBI_VERSION}"
-MONITORING_WAR = "com.intalio.bpms.monitoring:intalio-bpms-monitoring-webapp:war:#{MONITORING_VERSION}"
 SOCIAL_WAR = "com.intalio.social:social:war:#{SOCIAL_VERSION}"
 ODE_VALIDATOR_DIST = "org.apache.ode:ode-validator:zip:#{ODE_VALIDATOR_VERSION}"
 PXE_WAR = "com.intalio.bpms.pxe:ode-axis2-war:war:#{PXE_VERSION}"
@@ -338,9 +336,6 @@ ODE_LIBS = {
 }
 
 PXE = ODE_LIBS
-
-CONSOLE = ["com.intalio.bpms.console-common:console-common-webapp:jar:#{BPMS_CONSOLE_VERSION}",
-           "com.intalio.bpms.console-common:console-common-models:jar:#{BPMS_CONSOLE_VERSION}"]
 
 TEMPO = {
   :uifw => "org.intalio.tempo:tempo-ui-fw:jar:#{TEMPO_VERSION}",
