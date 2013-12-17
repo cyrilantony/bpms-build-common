@@ -24,6 +24,7 @@ CHOICE_NAMES = ["database", "server"] #Do not change the order of this. Incase a
 
 APACHEDS_WEBAPP_WAR ="org.intalio.tempo:apacheds-webapp:war:#{APACHEDS_WEBAPP_VERSION}"
 BPMSAJAX = "com.intalio.bpms.ajax:intalioajax:zip:#{BPMSAJAX_VERSION}"
+BPMS_CONSOLE_WAR ="com.intalio.bpms.console:intalio-bpms-console-webapp:war:#{BPMS_CONSOLE_VERSION}"
 BPMS_DASHBOARD_WAR ="com.intalio.bpms.dashboard:bpms-dashboard:war:#{BPMS_DASHBOARD_VERSION}"
 BPMS_DASHBOARD_JAR ="com.intalio.bpms.dashboard:bpms-dashboard:jar:#{BPMS_DASHBOARD_VERSION}"
 CAS_WEBAPP_WAR = "org.intalio.tempo:cas-webapp:war:#{CAS_WEBAPP_VERSION}"
@@ -33,6 +34,7 @@ FDS_MODULE = "org.intalio.tempo:tempo-fds:mar:#{FDS_VERSION}"
 FDS_WAR = "org.intalio.tempo:tempo-fds:war:#{FDS_VERSION}"
 FDS_JAR = "org.intalio.tempo:tempo-fds:jar:#{FDS_VERSION}"
 JDBC_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.jdbc.runtime:mar:#{PXE_JDBC_CONNECTOR_VERSION}"
+MONITORING_WAR = "com.intalio.bpms.monitoring:intalio-bpms-monitoring-webapp:war:#{MONITORING_VERSION}"
 MOBILE_WORKFLOW_WAR = "com.intalio.mobi:mobi:war:#{MOBI_VERSION}"
 SOCIAL_WAR = "com.intalio.social:social:war:#{SOCIAL_VERSION}"
 ODE_VALIDATOR_DIST = "org.apache.ode:ode-validator:zip:#{ODE_VALIDATOR_VERSION}"
@@ -337,6 +339,9 @@ ODE_LIBS = {
 }
 
 PXE = ODE_LIBS
+
+CONSOLE = ["com.intalio.bpms.console-common:console-common-webapp:jar:#{BPMS_CONSOLE_VERSION}",
+           "com.intalio.bpms.console-common:console-common-models:jar:#{BPMS_CONSOLE_VERSION}"]
 
 TEMPO = {
   :uifw => "org.intalio.tempo:tempo-ui-fw:jar:#{TEMPO_VERSION}",
