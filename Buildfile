@@ -68,4 +68,14 @@ define "openrelease" do
   install openrelease
   upload openrelease 
 end
+
+define "intaliocommonfunction" do
+  puts "Packaging intaliocommonfunction"
+  file = ("intalio-common-function.rb")
+  intaliocommonfunction = artifact('org.intalio.common.dependencies:intaliocommonfunction:rb:'+VERSION_NUMBER).from(file)
+  puts "Installing intaliocommonfunction"
+  install intaliocommonfunction
+  upload intaliocommonfunction
+end
+
 end
