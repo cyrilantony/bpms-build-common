@@ -2,7 +2,7 @@ BIRT_VERSION = "3.7.2"
 SPRING_VERSION = "3.1.2.RELEASE"
 SPRING_VERSION_324 = "3.2.4.RELEASE"
 
-DERBY_VER = "10.8.2.2" # Note=> If we change derby version then for jboss 7 we also need to change module.xml file located parrallel to this fileupload
+DERBY_VER = "10.8.2.2"
 MYSQL_VERSION="5.1.21"
 ORACLE_VERSION="10g"
 DB2_VERSION="9.2"
