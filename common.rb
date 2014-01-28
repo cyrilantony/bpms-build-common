@@ -298,6 +298,8 @@ SPRING_JSON = ["net.sf.spring-json:spring-json:jar:1.3.1"]
 SOJO_OPTIONAL = ["net.sf:sojo-optional:jar:0.5.0"]
 SOJO = [ "net.sf.sojo:sojo:jar:1.0.5","net.sf:sojo-optional:jar:0.5.0" ]
 
+XSD_GEN = ["org.wiztools.commons:xsd-gen:jar:0.2.0"]
+
 # the list of dependencies below has been generated
 ORBEON_LIBS = ["orbeon:activation-1_0_2:jar:3.8.0.201005141856-CE",
 "orbeon:ant-1_6_5:jar:3.8.0.201005141856-CE",
