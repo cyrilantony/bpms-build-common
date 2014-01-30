@@ -30,6 +30,10 @@ AXIOM = group("axiom-api", "axiom-dom", "axiom-impl",:under=>"org.apache.ws.comm
 BACKPORT = "backport-util-concurrent:backport-util-concurrent:jar:3.1"
 BPMS_COMMON = ["com.intalio.bpms.common:bpms-common:jar:#{BPMS_COMMON_VERSION}"]
 CASTOR = "castor:castor:jar:1.0"
+CASTOR_CODEHAUS = {
+  :base => "org.codehaus.castor:castor:jar:1.2",
+  :xmlschema => "org.codehaus.castor:castor-xml-schema:jar:1.2"
+  }
 CAS_CLIENT = "cas:casclient:jar:2.1.1"
 CSV = "org.ostermiller:utils:jar:1.07.00"
 DB_CONNECTOR = {
@@ -297,8 +301,6 @@ SECURITY = {
 SPRING_JSON = ["net.sf.spring-json:spring-json:jar:1.3.1"]
 SOJO_OPTIONAL = ["net.sf:sojo-optional:jar:0.5.0"]
 SOJO = [ "net.sf.sojo:sojo:jar:1.0.5","net.sf:sojo-optional:jar:0.5.0" ]
-
-XSD_GEN = ["org.wiztools.commons:xsd-gen:jar:0.2.0"]
 
 # the list of dependencies below has been generated
 ORBEON_LIBS = ["orbeon:activation-1_0_2:jar:3.8.0.201005141856-CE",
