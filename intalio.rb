@@ -63,7 +63,6 @@ ANNONGEN = "annogen:annogen:jar:0.1.0"
 ANTLR = [ "antlr:antlr:jar:2.7.6" ]
 APACHE_DERBY_TOOLS = "org.apache.derby:derbytools:jar:#{DERBY_VER}"
 AXIS2_WAR = "org.apache.axis2:axis2-webapp:war:1.6.2"
-AXIS2BRE_WAR = "org.apache.axis2:axis2-webapp:war:1.5-i2"
 BATIK = group(%w{
   batik-awt-util  batik-bridge      batik-css       batik-dom
   batik-ext       batik-extension   batik-gui-util  batik-gvt
