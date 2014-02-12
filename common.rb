@@ -107,9 +107,9 @@ SUNMAIL = ["javax.mail:mail:jar:1.4.1", SUNACTIVATION]
 SERVLET_API = "javax.servlet:servlet-api:jar:2.4"
 SERVLET_API_25 = "javax.servlet:servlet-api:jar:2.5"
 SHOAL = [ "net.java.dev.shoal:shoal-jxta:jar:1.1-08182009", "net.java.dev.shoal:shoal-gms:jar:1.1-08182009" ]
-SLF4J = {:api => "org.slf4j:slf4j-api:jar:1.4.3" , 
-         :log4j12 => "org.slf4j:slf4j-log4j12:jar:1.4.3",
-         :jcl104overslf4j =>"org.slf4j:jcl104-over-slf4j:jar:1.4.3"}
+SLF4J = {:api => "org.slf4j:slf4j-api:jar:1.7.6",
+         :log4j12 => "org.slf4j:slf4j-log4j12:jar:1.7.6",
+         :jcl104overslf4j =>"org.slf4j:jcl-over-slf4j:jar:1.7.6"}
 SPRING = {
   :core => "org.springframework:spring:jar:2.5.5",
   :webmvc_portlet => "org.springframework:spring-webmvc-portlet:jar:2.5.5",
