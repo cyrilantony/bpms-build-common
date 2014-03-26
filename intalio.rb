@@ -63,7 +63,6 @@ ANNONGEN = "annogen:annogen:jar:0.1.0"
 ANTLR = [ "antlr:antlr:jar:2.7.6" ]
 APACHE_DERBY_TOOLS = "org.apache.derby:derbytools:jar:#{DERBY_VER}"
 AXIS2_WAR = "org.apache.axis2:axis2-webapp:war:1.6.2"
-AXIS2BRE_WAR = "org.apache.axis2:axis2-webapp:war:1.5-i2"
 BATIK = group(%w{
   batik-awt-util  batik-bridge      batik-css       batik-dom
   batik-ext       batik-extension   batik-gui-util  batik-gvt
@@ -78,12 +77,13 @@ BTM = {
 CGLIB_NODEP="cglib:cglib-nodep:jar:2.2.2"
 DB2_DRIVER = "db2:jcc:jar:#{DB2_VERSION}"
 EASYMOCK = "easymock:easymock:jar:2.0"
-EMAIL_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.email:aar:1.9"
+EMAIL_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.email:aar:#{EMAIL_CONNECTOR_VERSION}"
 GERONIMO_JETTY = "org.apache.geronimo:geronimo-jetty6-jee5:zip:2.0.1"
 GSON = ["com.google.code.gson:gson:jar:1.7.1"]
 HSQLDB = "hsqldb:hsqldb:jar:1.8.0.7"
 INGRES_OPENJPA = "com.ingres.jdbc:openjpa-jdbc-ingres:jar:0.1.0"
-INTALIO_LICENSE = "com.intalio.bpms.license:license:jar:#{INTALIO_LICENSE_VERSION}"
+INTALIO_LICENSE = "com.intalio.bpms.license:license-core:jar:#{INTALIO_LICENSE_VERSION}"
+INTALIO_LICENSE_GEN = "com.intalio.bpms.license:license-generator:jar:#{INTALIO_LICENSE_VERSION}"
 JBI  = group("org.apache.servicemix.specs.jbi-api-1.0", :under=>"org.apache.servicemix.specs", :version=>"1.1.0")
 JBOSS = "jboss:jboss-appserver:zip:#{JBOSS_VERSION}"
 JBOSS43 ="jboss:jboss-appserver:zip:#{JBOSS43_VERSION}"

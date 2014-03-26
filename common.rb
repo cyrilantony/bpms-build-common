@@ -98,7 +98,7 @@ JUNIT = "junit:junit:jar:4.4"
 JYAML = "org.jyaml:jyaml:jar:1.3"
 LIFERAY = group("portal-impl", "portal-kernel", "util-java", "portal-service",:under=>"com.liferay", :version=>"5.2.0")
 LIFT = [group("lift-core", "lift-amqp", "lift-facebook", "lift-textile","lift-webkit", "lift-widgets", "lift-xmpp",:under=>"net.liftweb",:version=>"0.8")]
-LOG4J = "log4j:log4j:jar:1.2.15"
+LOG4J = "log4j:log4j:jar:1.2.17"
 NEETHI = "org.apache.neethi:neethi:jar:3.0.2"
 OPENSSO_CLIENT_SDK = "com.sun:openssoclientsdk:jar:3.0"
 PORTLET_API = "portlet-api:portlet-api:jar:1.0"
@@ -107,9 +107,9 @@ SUNMAIL = ["javax.mail:mail:jar:1.4.1", SUNACTIVATION]
 SERVLET_API = "javax.servlet:servlet-api:jar:2.4"
 SERVLET_API_25 = "javax.servlet:servlet-api:jar:2.5"
 SHOAL = [ "net.java.dev.shoal:shoal-jxta:jar:1.1-08182009", "net.java.dev.shoal:shoal-gms:jar:1.1-08182009" ]
-SLF4J = {:api => "org.slf4j:slf4j-api:jar:1.4.3" , 
-         :log4j12 => "org.slf4j:slf4j-log4j12:jar:1.4.3",
-         :jcl104overslf4j =>"org.slf4j:jcl104-over-slf4j:jar:1.4.3"}
+SLF4J = {:api => "org.slf4j:slf4j-api:jar:1.7.6",
+         :log4j12 => "org.slf4j:slf4j-log4j12:jar:1.7.6",
+         :jcl104overslf4j =>"org.slf4j:jcl-over-slf4j:jar:1.7.6"}
 SPRING = {
   :core => "org.springframework:spring:jar:2.5.5",
   :webmvc_portlet => "org.springframework:spring-webmvc-portlet:jar:2.5.5",
