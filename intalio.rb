@@ -166,6 +166,8 @@ HIBERNATE = [
   "cglib:cglib:jar:2.1_3",
   "asm:asm:jar:1.5.3"]
 
+CONNECTOR_JDBC_CORE = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.jdbc.core:jar:#{CONNECTOR_JDBC_VERSION}"
+
 PXE_HIBERNATE = ["javassist:javassist:jar:3.12.0.GA",
                  "org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final",
                  "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final",
