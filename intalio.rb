@@ -40,7 +40,7 @@ SOCIAL_WAR = "com.intalio.social:social:war:#{SOCIAL_VERSION}"
 ODE_VALIDATOR_DIST = "org.apache.ode:ode-validator:zip:#{ODE_VALIDATOR_VERSION}"
 PXE_WAR = "com.intalio.bpms.pxe:ode-axis2-war:war:#{PXE_VERSION}"
 PXE_HA_JDBC_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.jdbc.runtime:mar:#{PXE_HA_JDBC_CONNECTOR_VERSION}"
-PXE_HA_DATABASE_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.jdbc.runtime:mar:#{PXE_HA_DATABASE_CONNECTOR_VERSION}"
+PXE_HA_DATABASE_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors-jdbc-runtime:mar:#{PXE_HA_DATABASE_CONNECTOR_VERSION}"
 PXE_HA_WAR = "com.intalio.bpms.pxe:ode-axis2ha-war:war:#{PXE_HA_VERSION}"
 PXE_HA_XPATH_EXT = "org.intalio.tempo:tempo-processes-xpath-extensions:jar:#{PXE_HA_PROCESSES_VERSION}"
 PXE_HA_TRANSPORT_HANDLER_MAR = "com.intalio.bpms.pxe:ode-axis2-transport-handler:mar:#{PXE_HA_VERSION}"
@@ -165,6 +165,8 @@ HIBERNATE = [
   "org.hibernate:hibernate-tools:jar:3.2.0.beta9a",
   "cglib:cglib:jar:2.1_3",
   "asm:asm:jar:1.5.3"]
+
+CONNECTOR_JDBC_CORE = "com.intalio.bpms.connectors:com.intalio.bpms.connectors-jdbc-core:jar:#{CONNECTOR_JDBC_VERSION}"
 
 PXE_HIBERNATE = ["javassist:javassist:jar:3.12.0.GA",
                  "org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final",
