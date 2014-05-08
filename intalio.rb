@@ -45,6 +45,7 @@ PXE_HA_WAR = "com.intalio.bpms.pxe:ode-axis2ha-war:war:#{PXE_HA_VERSION}"
 PXE_HA_XPATH_EXT = "org.intalio.tempo:tempo-processes-xpath-extensions:jar:#{PXE_HA_PROCESSES_VERSION}"
 PXE_HA_TRANSPORT_HANDLER_MAR = "com.intalio.bpms.pxe:ode-axis2-transport-handler:mar:#{PXE_HA_VERSION}"
 PXE_HA_TRANSPORT_HANDLER_JAR = "com.intalio.bpms.pxe:ode-axis2-transport-handler:jar:#{PXE_HA_VERSION}"
+PXE_HA_AGENTS_JAR = "com.intalio.bpms.pxe:ode-agents:jar:#{PXE_HA_VERSION}"
 TEMPO_PXE_INTEGRATION ="org.intalio.tempo:tempo-pxe-integration:jar:#{TEMPO_PXE_INTEGRATION_VERSION}"
 TEMPO_PXE_HA_INTEGRATION ="org.intalio.tempo:tempo-pxe-integration:jar:#{TEMPO_PXE_HA_INTEGRATION_VERSION}"
 TMP_PROCESS_HANDLER ="org.intalio.tmp:tmp-process-handler:mar:#{TMP_PROCESS_HANDLER_VERSION}"
@@ -155,6 +156,17 @@ AXIS2_MODULES = struct(
            "joda-time:joda-time:jar:1.6.2",
            BACKPORT]
 )
+RAMPART = group("rampart-core", "rampart-policy", "rampart-trust", :under=>"org.apache.rampart", :version=>"1.6.2")
+AXIS2_MODULE_LIBS = ["org.apache.ws.security:wss4j:jar:1.6.4",
+           "org.apache.santuario:xmlsec:jar:1.4.6",
+           "org.apache.axis2:mex:jar:impl:1.6.2",
+           "org.opensaml:opensaml:jar:2.5.1-1",
+           "bouncycastle:bcprov-jdk15:jar:140",
+           "org.opensaml:xmltooling:jar:1.3.2-1",
+           "org.apache.velocity:velocity:jar:1.5",
+           "org.opensaml:openws:jar:1.4.2-1",
+           "org.owasp.esapi:esapi:jar:2.0GA",
+           "joda-time:joda-time:jar:1.6.2"]
 TAS_ALFRESCO = group("axis", "web-service-client", "wss4j", "saaj", "bcprov-jdk15-137",  "jaxrpc",  "xalan",  "opensaml",  "xmlsec-1.4.1",  "activation",  "wsdl4j",  "mail",  :under => "alfresco", :version => "2.9.0B")
 JACKSON = ["org.codehaus.jackson:jackson-mapper-asl:jar:1.9.9","org.codehaus.jackson:jackson-core-asl:jar:1.9.9"]
 HIBERNATE_VALIDATOR = "org.hibernate:hibernate-validator:jar:3.0.0.ga"
@@ -323,10 +335,18 @@ WSI_ORBEON_LIBS = [
 #Intalio modules#
 
 DEPLOY_CLUSTERING  = ["org.intalio.deploy:deploy-impl:jar:#{AXIS2SERVICES_DEPLOY_WS_VERSION}","org.springframework:spring:jar:2.5.5"]
-INTALIO_DEPLOY = group("deploy-api", "deploy-ws-common", "deploy-ws-client", :under=>"org.intalio.deploy",:version=>"#{AXIS2SERVICES_DEPLOY_WS_VERSION}")
+INTALIO_DEPLOY = group("deploy-impl", "deploy-api", "deploy-ws-common", "deploy-ws-client", :under=>"org.intalio.deploy",:version=>"#{AXIS2SERVICES_DEPLOY_WS_VERSION}")
 ODE_LIBS = {
   :odeaxis2 => "com.intalio.bpms.pxe:ode-axis2:jar:#{ODE_VERSION}",
   :odebpelapi => "com.intalio.bpms.pxe:ode-bpel-api:jar:#{ODE_VERSION}",
+  :odebpeldao => "com.intalio.bpms.pxe:ode-bpel-dao:jar:#{ODE_VERSION}",
+  :odedaohb => "com.intalio.bpms.pxe:ode-dao-hibernate:jar:#{ODE_VERSION}",
+  :odedaojpa => "com.intalio.bpms.pxe:ode-dao-jpa:jar:#{ODE_VERSION}",
+  :odebpelql => "com.intalio.bpms.pxe:ode-bpel-ql:jar:#{ODE_VERSION}",
+  :odebpelstore => "com.intalio.bpms.pxe:ode-bpel-store:jar:#{ODE_VERSION}",
+  :odejacob => "com.intalio.bpms.pxe:ode-jacob:jar:#{ODE_VERSION}",
+  :odepxecluster => "com.intalio.bpms.pxe:ode-pxe-cluster:jar:#{ODE_VERSION}",
+  :odeschedulersimple => "com.intalio.bpms.pxe:ode-scheduler-simple:jar:#{ODE_VERSION}",
   :odebpelapijca => "com.intalio.bpms.pxe:ode-bpel-api-jca:jar:#{ODE_VERSION}",
   :odebpelcompiler =>"com.intalio.bpms.pxe:ode-bpel-compiler:jar:#{ODE_VERSION}",
   :odebpelconnector =>"com.intalio.bpms.pxe:ode-bpel-connector:jar:#{ODE_VERSION}",

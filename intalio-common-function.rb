@@ -30,9 +30,9 @@ class CommonFunctions
 		if(servlet.css("servlet-name").first.content.include? '-spring-servlet')
 		    return servlet
 		end
-
-		return nil
 	    end
+
+	    return nil
 	end
 
 	def self.findNonSpringServlets(doc, namespace)
@@ -108,7 +108,9 @@ class CommonFunctions
 	end
 
 	def self.addServlet(doc, servletNode)
-	    doc.add_child(servletNode)
+	    webAppNode = doc.css("web-app").first
+	    firstChild = webAppNode.children().first
+	    firstChild.add_next_sibling(servletNode)
 	end
 
 	def self.addServletMapping(servletNode, servletMappingNodes)
