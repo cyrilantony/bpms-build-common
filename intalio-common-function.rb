@@ -129,14 +129,8 @@ class CommonFunctions
 	    return doc.xpath("//ns:listener", 'ns' => namespace)
 	end
 
-	def self.getWebContextParamNode(doc,paramName, namespace)
+	def self.getWebContextParamNode(doc, paramName, namespace)
 	    return doc.xpath("//ns:context-param[ns:param-name='"+paramName+"']", 'ns' => namespace).first
-	end
-
-	def self.addWebListeners(doc, listenerNodes)
-	    webAppNode = doc.css("web-app").first
-	    firstChild = webAppNode.children().first
-	    firstChild.add_next_sibling(listenerNodes)
 	end
 
 	def self.addSpringContextPathToSpringServlet(springServletNode, contextPath, namespace)
