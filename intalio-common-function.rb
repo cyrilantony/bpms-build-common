@@ -56,7 +56,7 @@ class CommonFunctions
 	    return servletNode.css("servlet-name").first.content
 	end
 
-	def self.getContextConfigLocationParam(springServletNode, namespace)
+	def self.getSpringContextConfigLocationParam(springServletNode, namespace)
 	    initParamNode = springServletNode.xpath("ns:init-param[ns:param-name='contextConfigLocation']/ns:param-value", 'ns' => 'http://java.sun.com/xml/ns/javaee')
 	    return initParamNode.first.content
 	end
@@ -74,7 +74,7 @@ class CommonFunctions
 	end
 
 	def self.getServletMappings(doc, servletName, namespace)
-	    return doc.xpath("//ns:servlet-mapping[ns:servlet-name='"+servletName+"']", 'ns' => 'http://java.sun.com/xml/ns/javaee')
+	    return doc.xpath("//ns:servlet-mapping[ns:servlet-name='"+servletName+"']", 'ns' => namespace)
 	end
 
 	def self.getFilters(doc, namespace)
@@ -109,19 +109,48 @@ class CommonFunctions
 	    return urlMappings
 	end
 
+	def self.getWebContextParamNodes(doc, namespace)
+	  return doc.xpath("//ns:context-param", 'ns' => namespace)
+	end
+
+	def self.getWebContextParamName(paramNode)
+	    return paramNode.css("param-name").first.content
+	end
+
+	def self.getWebContextParamValue(paramNode)
+	    return paramNode.css("param-value").first.content
+	end
+
+	def self.getWebContextParamNode(doc,paramName, namespace)
+	    return doc.xpath("//ns:context-param[ns:param-name='"+paramName+"']", 'ns' => namespace).first
+	end
 	def self.addSpringContextPathToSpringServlet(springServletNode, contextPath, namespace)
-	    initParamNode = springServletNode.xpath("ns:init-param[ns:param-name='contextConfigLocation']/ns:param-value", 'ns' => namespace)
-	    contextConfigLocation = initParamNode.first.content
+	    paramValueNode = springServletNode.xpath("ns:init-param[ns:param-name='contextConfigLocation']/ns:param-value", 'ns' => namespace)
+	    contextConfigLocation = paramValueNode.first.content
 
 	    if(!(contextConfigLocation.include? contextPath))
-		initParamNode.first.content = contextConfigLocation+", "+contextPath
+		paramValueNode.first.content = contextConfigLocation+", "+contextPath
 	    end
 	end
 
-	def self.addServlet(doc, servletNode)
+	def self.addWebContextParamValue(paramNode,value)
+	    paramValueNode = paramNode.css("param-value")
+
+	    contextConfigLocation = paramValueNode.first.content
+
+	    if(!(contextConfigLocation.include? value))
+		paramValueNode.first.content = contextConfigLocation+", "+value
+	    end
+	end
+
+	def self.addNewNode(doc, node)
 	    webAppNode = doc.css("web-app").first
 	    firstChild = webAppNode.children().first
-	    firstChild.add_next_sibling(servletNode)
+	    firstChild.add_next_sibling(node)
+	end
+
+	def self.addServlet(doc, servletNode)
+	    self.addNewNode(doc, servletNode)
 	end
 
 	def self.addServletMapping(servletNode, servletMappingNodes)
