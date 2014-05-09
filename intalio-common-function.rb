@@ -23,29 +23,33 @@ class CommonFunctions
 	    return Nokogiri::XML(f)
 	end
 
-	def self.findSpringServlet(doc, namespace)
+	def self.getSpringServlet(doc, namespace)
 	    servletNodes = doc.xpath("//ns:servlet", 'ns' => namespace)
 
-	    servletNodes.each do |servlet|
-		if(servlet.css("servlet-name").first.content.include? '-spring-servlet')
-		    return servlet
+	    servletNodes.each do |servletNode|
+		if(servletNode.css("servlet-name").first.content.include? '-spring-servlet')
+		    return servletNode
 		end
 	    end
 
 	    return nil
 	end
 
-	def self.findNonSpringServlets(doc, namespace)
-	    servlets = Array.new
+	def self.getNonSpringServlets(doc, namespace)
+	    servletNodes = Array.new
 	    servletNodes = doc.xpath("//ns:servlet", 'ns' => namespace)
 
-	    servletNodes.each do |servlet|
-		if(!(servlet.css("servlet-name").first.content.include? '-spring-servlet'))
-		    servlets.push(servlet)
+	    servletNodes.each do |servletNode|
+		if(!(servletNode.css("servlet-name").first.content.include? '-spring-servlet'))
+		    servletNodes.push(servletNode)
 		end
 	    end
 
-	    return servlets
+	    return servletNodes
+	end
+
+	def self.getServlets(doc, namespace)
+	    return doc.xpath("//ns:servlet", 'ns' => namespace)
 	end
 
 	def self.getServletName(servletNode)
@@ -62,8 +66,8 @@ class CommonFunctions
 
 	    servletMappingNodes = doc.xpath("//ns:servlet-mapping[ns:servlet-name='"+servletName+"']", 'ns' => 'http://java.sun.com/xml/ns/javaee')
 
-	    servletMappingNodes.each do |mapping|
-		urlPatterns.push(mapping.css("url-pattern"))
+	    servletMappingNodes.each do |mappingNode|
+		urlPatterns.push(mappingNode.css("url-pattern"))
 	    end
 
 	    return urlPatterns
@@ -73,16 +77,36 @@ class CommonFunctions
 	    return doc.xpath("//ns:servlet-mapping[ns:servlet-name='"+servletName+"']", 'ns' => 'http://java.sun.com/xml/ns/javaee')
 	end
 
-	def self.getFilterNodes(doc, namespace)
-
+	def self.getFilters(doc, namespace)
+	    return doc.xpath("//ns:filter", 'ns' => namespace)
 	end
 
-	def self.getFilterNode(doc, filterName, namespace)
-
+	def self.getFilter(doc, filterName, namespace)
+	    return doc.xpath("//ns:filter[ns:filter-name='"+filterName+"']", 'ns' => namespace).first
 	end
 
-	def self.getFilterUrlMapping(doc, filterName, nameSpace)
+	def self.getFilterName(filterName)
+	    return filterName.css("filter-name").first.content
+	end
 
+	def self.getFilterMappings(doc, filterName, namespace)
+	    return doc.xpath("//ns:filter-mapping[ns:filter-name='"+filterName+"']", 'ns' => 'http://java.sun.com/xml/ns/javaee')
+	end
+
+	def self.getFilterUrlMappings(doc, filterName, nameSpace)
+	    urlMappings = Array.new
+
+	    filterMappingNodes = doc.xpath("//ns:filter-mapping[ns:filter-name='"+filterName+"']", 'ns' => 'http://java.sun.com/xml/ns/javaee')
+
+	    filterMappingNodes.each do |mappingNode|
+		if(mappingNode.css("url-pattern").empty?())
+		    urlMappings.push(mappingNode.css("servlet-name"))
+		else
+		    urlMappings.push(mappingNode.css("url-pattern"))
+		end
+	    end
+
+	    return urlMappings
 	end
 
 	def self.addSpringContextPathToSpringServlet(springServletNode, contextPath, namespace)
@@ -91,6 +115,18 @@ class CommonFunctions
 
 	    if(!(contextConfigLocation.include? contextPath))
 		initParamNode.first.content = contextConfigLocation+", "+contextPath
+	    end
+	end
+
+	def self.addServlet(doc, servletNode)
+	    webAppNode = doc.css("web-app").first
+	    firstChild = webAppNode.children().first
+	    firstChild.add_next_sibling(servletNode)
+	end
+
+	def self.addServletMapping(servletNode, servletMappingNodes)
+	    servletMappingNodes.each do |mappingNode|
+		servletNode.add_next_sibling(mappingNode)
 	    end
 	end
 
@@ -107,15 +143,28 @@ class CommonFunctions
 	    end
 	end
 
-	def self.addServlet(doc, servletNode)
+	def self.addFilter(doc, filterNode)
 	    webAppNode = doc.css("web-app").first
 	    firstChild = webAppNode.children().first
-	    firstChild.add_next_sibling(servletNode)
+	    firstChild.add_next_sibling(filterNode)
 	end
 
-	def self.addServletMapping(servletNode, servletMappingNodes)
-	    servletMappingNodes.each do |mapping|
-		servletNode.add_next_sibling(mapping)
+	def self.addFilterMappings(filterNode, filterMappingNodes)
+	    filterMappingNodes.each do |mappingNode|
+		filterNode.add_next_sibling(mappingNode)
+	    end
+	end
+
+	def self.addFilterMappingWithUrlMapping(doc, filterNode, urlMappings)
+	    urlMappings.each do |urlMapping|
+		filterMappingNode = Nokogiri::XML::Node.new "filter-mapping", doc
+
+		filterNameNode = Nokogiri::XML::Node.new "filter-name", doc
+		filterNameNode.content = filterNode.css("filter-name").first.content
+
+		filterMappingNode.add_child(filterNameNode)
+		filterMappingNode.add_child(urlMapping)
+		filterNode.add_next_sibling(filterMappingNode)
 	    end
 	end
 
