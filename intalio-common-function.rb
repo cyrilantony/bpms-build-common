@@ -36,16 +36,20 @@ class CommonFunctions
 	end
 
 	def self.getNonSpringServlets(doc, namespace)
-	    servletNodes = Array.new
+	    nonSpringServletNodes = Array.new
 	    servletNodes = doc.xpath("//ns:servlet", 'ns' => namespace)
 
 	    servletNodes.each do |servletNode|
 		if(!(servletNode.css("servlet-name").first.content.include? '-spring-servlet'))
-		    servletNodes.push(servletNode)
+		    nonSpringServletNodes.push(servletNode)
 		end
 	    end
 
-	    return servletNodes
+	    return nonSpringServletNodes
+	end
+
+	def self.getServlet(doc, servletName, namespace)
+	    return doc.xpath("//ns:servlet[ns:servlet-name='"+servletName+"']", 'ns' => namespace).first
 	end
 
 	def self.getServlets(doc, namespace)
@@ -121,9 +125,20 @@ class CommonFunctions
 	    return paramNode.css("param-value").first.content
 	end
 
+	def self.getWebListeners(doc, namespace)
+	    return doc.xpath("//ns:listener", 'ns' => namespace)
+	end
+
 	def self.getWebContextParamNode(doc,paramName, namespace)
 	    return doc.xpath("//ns:context-param[ns:param-name='"+paramName+"']", 'ns' => namespace).first
 	end
+
+	def self.addWebListeners(doc, listenerNodes)
+	    webAppNode = doc.css("web-app").first
+	    firstChild = webAppNode.children().first
+	    firstChild.add_next_sibling(listenerNodes)
+	end
+
 	def self.addSpringContextPathToSpringServlet(springServletNode, contextPath, namespace)
 	    paramValueNode = springServletNode.xpath("ns:init-param[ns:param-name='contextConfigLocation']/ns:param-value", 'ns' => namespace)
 	    contextConfigLocation = paramValueNode.first.content
@@ -141,6 +156,12 @@ class CommonFunctions
 	    if(!(contextConfigLocation.include? value))
 		paramValueNode.first.content = contextConfigLocation+", "+value
 	    end
+	end
+
+	def self.addWebContextParamNodes(doc, paramNodes)
+	    webAppNode = doc.css("web-app").first
+	    firstChild = webAppNode.children().first
+	    firstChild.add_next_sibling(paramNodes)
 	end
 
 	def self.addNewNode(doc, node)

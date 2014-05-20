@@ -103,7 +103,8 @@ NEETHI = "org.apache.neethi:neethi:jar:3.0.2"
 OPENSSO_CLIENT_SDK = "com.sun:openssoclientsdk:jar:3.0"
 PORTLET_API = "portlet-api:portlet-api:jar:1.0"
 QOM = "net.sf.qom:qom:jar:0.1alpha3"
-SUNMAIL = ["javax.mail:mail:jar:1.4.1", SUNACTIVATION]
+SUNMAIL = ["javax.mail:mail:jar:1.4.1"]
+JMS = "javax.jms:jms:jar:1.1"
 SERVLET_API = "javax.servlet:servlet-api:jar:2.4"
 SERVLET_API_25 = "javax.servlet:servlet-api:jar:2.5"
 SHOAL = [ "net.java.dev.shoal:shoal-jxta:jar:1.1-08182009", "net.java.dev.shoal:shoal-gms:jar:1.1-08182009" ]
@@ -213,6 +214,7 @@ AXIS2 = {
   :backport => BACKPORT,
   :neethi => NEETHI,
   :sunmail => SUNMAIL,
+  :activation => SUNACTIVATION,
   :httpcore => HTTPCORE
 }
 
@@ -301,6 +303,15 @@ SECURITY = {
 SPRING_JSON = ["net.sf.spring-json:spring-json:jar:1.3.1"]
 SOJO_OPTIONAL = ["net.sf:sojo-optional:jar:0.5.0"]
 SOJO = [ "net.sf.sojo:sojo:jar:1.0.5","net.sf:sojo-optional:jar:0.5.0" ]
+
+RSYNTAXTEXTAREA = "com.fifesoft:rsyntaxtextarea:jar:2.5.0"
+SOAPUI = "com.smartbear.eviware:soapui:jar:5.0.0"
+PROXY_VOLE = "com.btr:proxy-vole:jar:20131209"
+
+HTTP_CLIENT_411 = ["org.apache.httpcomponents:httpclient:jar:4.1.1",
+               "org.apache.httpcomponents:httpclient-cache:jar:4.1.1",
+               "org.apache.httpcomponents:httpcore:jar:4.1.1",
+               "org.apache.httpcomponents:httpcore-nio:jar:4.1.1"]
 
 # the list of dependencies below has been generated
 ORBEON_LIBS = ["orbeon:activation-1_0_2:jar:3.8.0.201005141856-CE",

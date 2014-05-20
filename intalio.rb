@@ -55,7 +55,9 @@ TMS_SERVICE = "org.intalio.tempo:tempo-tms-service:aar:#{TEMPO_VERSION}"
 UIFW_WAR = "org.intalio.tempo:tempo-ui-fw:war:#{UIFW_VERSION}"
 WDS_WAR = "org.intalio.tempo:tempo-wds-service:war:#{WDS_VERSION}"
 WEBREPORT_WAR = "com.intalio.bpms.bam:bam-webreport:war:#{BAM_SERVICE_VERSION}"
+WEBREPORT_JAR = "com.intalio.bpms.bam:bam-webreport:jar:#{BAM_SERVICE_VERSION}"
 WSI_WAR = "com.intalio.bpms.wsi:intalio-bpms-wsi:war:#{WSI_VERSION}"
+WSI_JAR = "com.intalio.bpms.wsi:intalio-bpms-wsi:jar:#{WSI_VERSION}"
 GI_WAR = "com.intalio.bpms.gi:ajax:war:#{GI_WEBAPP_VERSION }"
 GI_JAR = "com.intalio.bpms.gi:ajax:jar:#{GI_WEBAPP_VERSION }"
 XPATH_EXT = "org.intalio.tempo:tempo-processes-xpath-extensions:jar:#{PXE_PROCESSES_VERSION}"
@@ -73,7 +75,10 @@ BATIK = group(%w{
   batik-parser    batik-script      batik-svg-dom   batik-svggen
   batik-swing     batik-transcoder  batik-util      batik-xml},
   :under=>"batik", :version=>"1.6")
-BIRT_WAR  = artifact("org.eclipse.birt:birt-webapp:war:#{BIRT_VERSION}")
+
+BIRT_WAR  = "org.eclipse.birt:birt-webapp:war:#{BIRT_VERSION}"
+BIRT_WAR_ARTIFACT  = artifact(BIRT_WAR)
+
 BTM = {
   :core => "org.codehaus.btm:btm:jar:2.1.3", 
   :tomcatlifecycle => "org.codehaus.btm:btm-tomcat55-lifecycle:jar:2.1.3" 
@@ -159,6 +164,7 @@ AXIS2_MODULES = struct(
            "joda-time:joda-time:jar:1.6.2",
            BACKPORT]
 )
+BCPROV_JDK15 = "bouncycastle:bcprov-jdk15:jar:140"
 RAMPART = group("rampart-core", "rampart-policy", "rampart-trust", :under=>"org.apache.rampart", :version=>"1.6.2")
 AXIS2_MODULE_LIBS = ["org.apache.ws.security:wss4j:jar:1.6.4",
            "org.apache.santuario:xmlsec:jar:1.4.6",
