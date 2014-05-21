@@ -442,3 +442,14 @@ ORBEON_LIBS = ["orbeon:activation-1_0_2:jar:3.8.0.201005141856-CE",
 "orbeon:xerces-xml-apis-2_9_orbeon_20070711:jar:3.8.0.201005141856-CE",
 "orbeon:xmlgraphics-commons-1_1:jar:3.8.0.201005141856-CE"
 ]
+
+HIBERNATE_3_X = ["javassist:javassist:jar:3.12.0.GA",
+                 "org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final",
+                 "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final",
+                 "org.hibernate:hibernate-core:jar:3.6.9.Final", "asm:asm:jar:1.5.3",
+                 "org.hibernate:hibernate-entitymanager:jar:3.6.9.Final",
+                 #"org.hibernate:hibernate-annotations:jar:3.5.6-Final",
+                 "antlr:antlr:jar:2.7.6",
+                 "cglib:cglib:jar:2.1_3",
+                 "net.sf.ehcache:ehcache:jar:1.2.3",
+                 "org.hibernate:hibernate-validator:jar:3.1.0.GA"]
