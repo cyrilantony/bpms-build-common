@@ -22,6 +22,10 @@ APACHE_DERBY_NET = "org.apache.derby:derbynet:jar:#{DERBY_VER}"
 APACHE_DERBY_CLIENT = "org.apache.derby:derbyclient:jar:#{DERBY_VER}"
 APACHE_DS = "org.apache.apacheds:noarch-installer:jar:1.5.1a"
 APACHE_DS_DEPS = "org.apache.apacheds:apacheds-deps:jar:1.5.4"
+
+APACHE_MIME4J = {
+:core => "org.apache.james:apache-mime4j-core:jar:0.7.2"
+}
 ASPECTJ = {
 :rt => "org.aspectj:aspectjrt:jar:1.6.12",
 :weaver => "org.aspectj:aspectjweaver:jar:1.6.12" 
@@ -48,7 +52,12 @@ GERONIMO_SPECS = {
   :derby => "org.apache.geronimo:geronimo-derby:jar:1.1",
   :jta => "org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1",
   :jpa => "org.apache.geronimo.specs:geronimo-jpa_3.0_spec:jar:1.0",
-  :jms => "org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1"
+  :jms => "org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1",
+  :annotation => "org.apache.geronimo.specs:geronimo-annotation_1.0_spec:jar:1.1",
+  :jaxws => "org.apache.geronimo.specs:geronimo-jaxws_2.2_spec:jar:1.0",
+  :saaj => "org.apache.geronimo.specs:geronimo-saaj_1.3_spec:jar:1.0.1",
+  :staxapi => "org.apache.geronimo.specs:geronimo-stax-api_1.0_spec:jar:1.0.1",
+  :wsmetadata => "org.apache.geronimo.specs:geronimo-ws-metadata_2.0_spec:jar:1.1.2"
 }
 GERONIMO = { 
   :kernel => "org.apache.geronimo.modules:geronimo-kernel:jar:2.0.1",
@@ -61,6 +70,7 @@ GERONIMO = {
   :management => "org.apache.geronimo.specs:geronimo-j2ee-management_1.0_spec:jar:1.1" }
 
 ICU4J = "com.ibm.icu:icu4j:jar:3.4.4"
+JAXWSTOOLS = "com.sun.xml.ws:jaxws-tools:jar:2.1.3"
 JODATIME = "joda-time:joda-time:jar:1.5.2"
 JASYPT = "org.jasypt:jasypt:jar:1.8"
 ICAL = "ical4j:ical4j:jar:0.9.20"
@@ -87,6 +97,13 @@ JAVAX               = struct(
 JAVAMAIL = [ JAVAX[:javamail], "org.apache.geronimo.specs:geronimo-activation_1.1_spec:jar:1.0.2" ]
 TOMCAT_CATALINA = "org.apache.tomcat:catalina:jar:6.0.35"
 JAXEN = "jaxen:jaxen:jar:1.1.1"
+JIBX_BIND = "org.jibx:jibx-bind:jar:1.2"
+JSR311 = {
+:api => "javax.ws.rs:jsr311-api:jar:1.0"
+}
+
+TOMCAT_TRIBES="org.apache.tomcat:tribes:jar:6.0.16"
+
 JDOM = "jdom:jdom:jar:1.0"
 JENCKS = "jencks:jencks-all:jar:1.1.3"
 JSON_TAGLIB = "json:json-taglib:jar:0.4.1"
@@ -201,12 +218,20 @@ AXIS2 = {
   :kernel => "org.apache.axis2:axis2-kernel:jar:1.6.2",
   :adb => "org.apache.axis2:axis2-adb:jar:1.6.2",
   :codegen => "org.apache.axis2:axis2-codegen:jar:1.6.2",
+  :adbcodegen => "org.apache.axis2:axis2-adb-codegen:jar:1.6.2",
+  :clustering => "org.apache.axis2:axis2-clustering:jar:1.6.2",
+  :corba => "org.apache.axis2:axis2-corba:jar:1.6.2",
+  :fastinfoset => "org.apache.axis2:axis2-fastinfoset:jar:1.6.2",
   :java2wsdl => "org.apache.axis2:axis2-java2wsdl:jar:1.6.2",
+  :jaxbri => "org.apache.axis2:axis2-jaxbri:jar:1.6.2",
   :jibx => "org.apache.axis2:axis2-jibx:jar:1.6.2",
   :jaxws => "org.apache.axis2:axis2-jaxws:jar:1.6.2",
   :saaj => "org.apache.axis2:axis2-saaj:jar:1.6.2",
+  :soapmonitorservlet => "org.apache.axis2:axis2-soapmonitorservlet:jar:1.6.2",
+  :spring => "org.apache.axis2:axis2-spring:jar:1.6.2",
   :xmlbeans => "org.apache.axis2:axis2-xmlbeans:jar:1.6.2",
   :json => "org.apache.axis2:axis2-json:jar:1.6.2",
+  :metadata => "org.apache.axis2:axis2-metadata:jar:1.6.2",
   :mtompolicy => "org.apache.axis2:axis2-mtompolicy:jar:1.6.2",
   :transport => "org.apache.axis2:axis2-transports:jar:1.0-i6",
   :wodenimpldom => "org.apache.woden:woden-impl-dom:jar:1.0M9",
@@ -217,6 +242,20 @@ AXIS2 = {
   :activation => SUNACTIVATION,
   :httpcore => HTTPCORE
 }
+
+AXIS2_JAXWS_MAR = "org.apache.axis2:axis2-jaxws:mar:1.6.2"
+MTOMPOLICY_MAR = "org.apache.axis2:mtompolicy:mar:1.6.2"
+PING_MAR = "org.apache.axis2:ping:mar:1.6.2"
+SOAPMONITOR_MAR = "org.apache.axis2:soapmonitor:mar:1.6.2"
+SCRIPTING_MAR = "org.apache.axis2:scripting:mar:1.6.2"
+
+
+WODEN = {
+	:implcommons => "org.apache.woden:woden-impl-commons:jar:1.0M9"
+}
+
+XML_RESOLVER =  "xml-resolver:xml-resolver:jar:1.2"
+
 
 ALFRESCO = [
   "com.alfresco:alfresco-web-client:jar:2.1.0",
@@ -259,6 +298,8 @@ APACHE_JPA = APACHE_JPA_2_0_0
 FREEMARKER = "org.freemarker:freemarker:jar:2.3.14"
 AOPALLIANCE ="aopalliance:aopalliance:jar:1.0"
 
+BCEL = "bcel:bcel:jar:5.1"
+
 CAS_LIBS = [
   group("cas-server-core",:under=>"org.jasig.cas", :version=>"3.2.1.1"),
   group("cas-server-support-ldap",:under=>"org.jasig.cas", :version=>"3.2.1.1"),
@@ -292,8 +333,17 @@ CAS_LIBS = [
   "xml-security:xmlsec:jar:1.4.0",  "taglibs:standard:jar:1.1.2"
 ]
 
+JAXB = {
+:api => "javax.xml.bind:jaxb-api:jar:2.1",
+:impl => "javax.xml.bind:jaxb-impl:jar:2.1.7",
+:xjc => "javax.xml.bind:jaxb-xjc:jar:2.1.7"
+}
+
 DEPLOY_API = "org.intalio.deploy:deploy-api:jar:#{AXIS2SERVICES_DEPLOY_WS_VERSION}"
 REGISTRY = "org.intalio.deploy:deploy-registry:jar:#{AXIS2SERVICES_DEPLOY_WS_VERSION}"
+
+REGEXP = "regexp:regexp:jar:1.2"
+
 SECURITY = { 
   :client => "org.intalio.security:security-ws-client:jar:#{INTALIO_SECURITY_VERSION}",
   :nutbolts => "org.intalio.security:security-web-nutsNbolts:jar:#{INTALIO_SECURITY_VERSION}",
