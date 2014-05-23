@@ -23,9 +23,8 @@ APACHE_DERBY_CLIENT = "org.apache.derby:derbyclient:jar:#{DERBY_VER}"
 APACHE_DS = "org.apache.apacheds:noarch-installer:jar:1.5.1a"
 APACHE_DS_DEPS = "org.apache.apacheds:apacheds-deps:jar:1.5.4"
 
-APACHE_MIME4J = {
-:core => "org.apache.james:apache-mime4j-core:jar:0.7.2"
-}
+APACHE_MIME4J = "org.apache.james:apache-mime4j-core:jar:0.7.2"
+
 ASPECTJ = {
 :rt => "org.aspectj:aspectjrt:jar:1.6.12",
 :weaver => "org.aspectj:aspectjweaver:jar:1.6.12" 
@@ -227,7 +226,7 @@ AXIS2 = {
   :jibx => "org.apache.axis2:axis2-jibx:jar:1.6.2",
   :jaxws => "org.apache.axis2:axis2-jaxws:jar:1.6.2",
   :saaj => "org.apache.axis2:axis2-saaj:jar:1.6.2",
-  :soapmonitorservlet => "org.apache.axis2:axis2-soapmonitorservlet:jar:1.6.2",
+  :soapmonitorservlet => "org.apache.axis2:axis2-soapmonitor-servlet:jar:1.6.2",
   :spring => "org.apache.axis2:axis2-spring:jar:1.6.2",
   :xmlbeans => "org.apache.axis2:axis2-xmlbeans:jar:1.6.2",
   :json => "org.apache.axis2:axis2-json:jar:1.6.2",
@@ -243,7 +242,7 @@ AXIS2 = {
   :httpcore => HTTPCORE
 }
 
-AXIS2_JAXWS_MAR = "org.apache.axis2:axis2-jaxws:mar:1.6.2"
+AXIS2_JAXWS_MAR = "org.apache.axis2:axis2-jaxws-mar:mar:1.6.2"
 MTOMPOLICY_MAR = "org.apache.axis2:mtompolicy:mar:1.6.2"
 PING_MAR = "org.apache.axis2:ping:mar:1.6.2"
 SOAPMONITOR_MAR = "org.apache.axis2:soapmonitor:mar:1.6.2"
@@ -335,8 +334,8 @@ CAS_LIBS = [
 
 JAXB = {
 :api => "javax.xml.bind:jaxb-api:jar:2.1",
-:impl => "javax.xml.bind:jaxb-impl:jar:2.1.7",
-:xjc => "javax.xml.bind:jaxb-xjc:jar:2.1.7"
+:impl => "com.sun.xml.bind:jaxb-impl:jar:2.1.7",
+:xjc => "com.sun.xml.bind:jaxb-xjc:jar:2.1.7"
 }
 
 DEPLOY_API = "org.intalio.deploy:deploy-api:jar:#{AXIS2SERVICES_DEPLOY_WS_VERSION}"

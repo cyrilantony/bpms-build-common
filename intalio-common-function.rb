@@ -142,6 +142,12 @@ class CommonFunctions
 	    end
 	end
 
+	def self.addWebListeners(doc, listenerNodes)
+	    webAppNode = doc.css("web-app").first
+	    firstChild = webAppNode.children().first
+	    firstChild.add_next_sibling(listenerNodes)
+	end
+
 	def self.addWebContextParamValue(paramNode,value)
 	    paramValueNode = paramNode.css("param-value")
 
