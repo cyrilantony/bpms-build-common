@@ -56,7 +56,9 @@ GERONIMO_SPECS = {
   :jaxws => "org.apache.geronimo.specs:geronimo-jaxws_2.2_spec:jar:1.0",
   :saaj => "org.apache.geronimo.specs:geronimo-saaj_1.3_spec:jar:1.0.1",
   :staxapi => "org.apache.geronimo.specs:geronimo-stax-api_1.0_spec:jar:1.0.1",
-  :wsmetadata => "org.apache.geronimo.specs:geronimo-ws-metadata_2.0_spec:jar:1.1.2"
+  :wsmetadata => "org.apache.geronimo.specs:geronimo-ws-metadata_2.0_spec:jar:1.1.2",
+  :activation => "org.apache.geronimo.specs:geronimo-activation_1.1_spec:jar:1.0.2",
+  :javamail =>"org.apache.geronimo.specs:geronimo-javamail_1.4_spec:jar:1.2"
 }
 GERONIMO = { 
   :kernel => "org.apache.geronimo.modules:geronimo-kernel:jar:2.0.1",
@@ -136,7 +138,7 @@ SPRING = {
   :test => "org.springframework:spring-test:jar:2.5.6"
 }
 TAGLIBS = [ "taglibs:standard:jar:1.1.2" ]
-URLREWRITE = "org.tuckey:urlrewrite:jar:3.1.0"
+URLREWRITE = "org.tuckey:urlrewritefilter:jar:4.0.4"
 
 WOODSTOX = [ "woodstox:wstx-asl:jar:3.2.4" ]
 WSDL4J = [ "wsdl4j:wsdl4j:jar:1.6.3" ]
@@ -184,10 +186,14 @@ INSTINCT = [
   "org.jmock:jmock-legacy:jar:2.5.0",
   "cglib:cglib-nodep:jar:2.1_3",
   "org.hamcrest:hamcrest-all:jar:1.1",
-  "org.objenesis:objenesis:jar:1.1",
-  JUNIT,
-  ANT
+  "org.objenesis:objenesis:jar:1.1"
 ]
+
+APACHE_ABDERA_LIB = "apache.incubator:abdera:jar:0.4.0-incubating"
+EZMORPH = "net.sf.ezmorph:ezmorph:jar:1.0.4"
+HTML_PARSER = "org.htmlparser:htmlparser:jar:1.0.5"
+JSON_LIB = "net.sf.json-lib:json-lib:jar:2.2.1-jdk15"
+XML_SECURITY = "xml-security:xmlsec:jar:1.3.0"
 
 APACHE_ABDERA = [
   AXIOM,
@@ -197,16 +203,16 @@ APACHE_ABDERA = [
   APACHE_COMMONS[:httpclient],
   APACHE_COMMONS[:lang],
   APACHE_COMMONS[:logging],
-  "net.sf.ezmorph:ezmorph:jar:1.0.4",
+  EZMORPH,
   STAX_API,
   JAVAMAIL,
-  "org.htmlparser:htmlparser:jar:1.0.5",
+  HTML_PARSER,
   JAXEN,
-  "net.sf.json-lib:json-lib:jar:2.2.1-jdk15",
+  JSON_LIB,
   WOODSTOX,
   XALAN,
-  "xml-security:xmlsec:jar:1.3.0",
-  "apache.incubator:abdera:jar:0.4.0-incubating"  
+  XML_SECURITY,
+  APACHE_ABDERA_LIB
 ]
 
 HTTPCORE = "org.apache.httpcomponents:httpcore:jar:4.0"
