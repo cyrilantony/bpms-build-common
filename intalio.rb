@@ -13,7 +13,7 @@ CHOICES = [DATABASE_COMPONENTS, SERVER_NAMES]#Do not change the order of this. I
 /#FOR EE VERSION#/
 PXE_HA_COMPONENTS =  [["database-connector",PXE_HA_DATABASE_CONNECTOR_VERSION],["helloworld-process",PXE_HA_HELLOWORLD_VERSION],["jdbc-connector", PXE_HA_JDBC_CONNECTOR_VERSION],["registry",PXE_HA_REGISTRY_VERSION],["tempo-pxe-integration",TEMPO_PXE_HA_INTEGRATION_VERSION], ["workflow-processes", PXE_HA_PROCESSES_VERSION]]
 AXIS2_COMPONENTS_EE = [["deploy-ws-service",AXIS2SERVICES_DEPLOY_WS_VERSION], ["tempo-tms-common", TEMPO_VERSION],["tempo-tms-service", TEMPO_VERSION],["tempo-tas-service-with-alfresco", TEMPO_TAS_SERVICE_WITH_ALFRESCO_VERSION], ["security-ws-service", INTALIO_SECURITY_VERSION],["bam-service", BAM_SERVICE_VERSION]]
-COMPONENTS_EE = [["pxe-ha", PXE_HA_VERSION,PXE_HA_COMPONENTS], ["bpms-console", BPMS_CONSOLE_VERSION, ""], ["collaboration",COLLABORATION_VERSION,""], ["mobi", MOBI_VERSION, ""], ["bpms-dashboard",BPMS_DASHBOARD_VERSION, ""],["ode-validator", ODE_VALIDATOR_VERSION,""], ["axis2-services", AXIS2SERVICES_DEPLOY_WS_VERSION, AXIS2_COMPONENTS_EE], ["webreport", WEBREPORT_VERSION,""],["gi-webapp", GI_WEBAPP_VERSION,""],["wsi", WSI_VERSION,""],["ui-fw", UIFW_VERSION, ""],["fds", FDS_VERSION, ""],["wds", WDS_VERSION, ""], ["bre", "", BRE_COMPONENTS], ["xforms-manager", XFORMS_MANAGER_VERSION, ""] ,["apacheds-webapp", APACHEDS_WEBAPP_VERSION,""],["cas-webapp", CAS_WEBAPP_VERSION, ""],["server-common", "", ""],["tmp-process-handler", TMP_PROCESS_HANDLER_VERSION, TMP_PROCESS_HANDLER_COMPONENT], ["social", SOCIAL_VERSION, ""]]
+COMPONENTS_EE = [["bpms-dashboard",BPMS_DASHBOARD_VERSION, ""], ["pxe-ha", PXE_HA_VERSION,PXE_HA_COMPONENTS], ["bpms-console", BPMS_CONSOLE_VERSION, ""], ["collaboration",COLLABORATION_VERSION,""], ["mobi", MOBI_VERSION, ""], ["ode-validator", ODE_VALIDATOR_VERSION,""], ["axis2-services", AXIS2SERVICES_DEPLOY_WS_VERSION, AXIS2_COMPONENTS_EE], ["webreport", WEBREPORT_VERSION,""],["gi-webapp", GI_WEBAPP_VERSION,""],["wsi", WSI_VERSION,""],["ui-fw", UIFW_VERSION, ""],["wds", WDS_VERSION, ""], ["bre", "", BRE_COMPONENTS],["apacheds-webapp", APACHEDS_WEBAPP_VERSION,""],["cas-webapp", CAS_WEBAPP_VERSION, ""],["server-common", "", ""],["tmp-process-handler", TMP_PROCESS_HANDLER_VERSION, TMP_PROCESS_HANDLER_COMPONENT], ["social", SOCIAL_VERSION, ""]]
 DATABASE_COMPONENTS_EE = [["oracle",ORACLE_VERSION],["postgres", POSTGRES_VERSION],["db2", DB2_VERSION],["derby", DERBY_VER],["sqlserver", SQLSERVER_VERSION],["mysql", MYSQL_VERSION],["sybase", SYBASE_VERSION],["ingres", INGRES_VERSION]]
 SERVER_NAMES_EE =[["geronimo",""],["tomcat-5", TOMCAT_5_VERSION],["tomcat-6",TOMCAT_6_VERSION], ["tomcat-7",TOMCAT_7_VERSION],["jboss",JBOSS_VERSION],["jboss43",JBOSS43_VERSION],["jboss43ear",""],["jboss61ear",""],["jboss7",JBOSS7_VERSION],["weblogic9",""],["weblogic10",""],["jetty9",JETTY9_VERSION],["jbosseap6",JBOSSEAP6_VERSION]]
 CHOICES_EE = [DATABASE_COMPONENTS_EE, SERVER_NAMES_EE]#Do not change the order of this. Incase an extra parrameter is added add it to the end.
@@ -24,11 +24,12 @@ CHOICE_NAMES = ["database", "server"] #Do not change the order of this. Incase a
 
 APACHEDS_WEBAPP_WAR ="org.intalio.tempo:apacheds-webapp:war:#{APACHEDS_WEBAPP_VERSION}"
 BPMSAJAX = "com.intalio.bpms.ajax:intalioajax:zip:#{BPMSAJAX_VERSION}"
-BPMS_CONSOLE_WAR ="com.intalio.bpms.console:intalio-bpms-console-webapp:war:#{BPMS_CONSOLE_VERSION}"
+BPMS_CONSOLE_WAR ="com.intalio.bpms.console:bpms-console:war:#{BPMS_CONSOLE_VERSION}"
 BPMS_DASHBOARD_WAR ="com.intalio.bpms.dashboard:bpms-dashboard:war:#{BPMS_DASHBOARD_VERSION}"
 BPMS_DASHBOARD_JAR ="com.intalio.bpms.dashboard:bpms-dashboard:jar:#{BPMS_DASHBOARD_VERSION}"
 CAS_WEBAPP_WAR = "org.intalio.tempo:cas-webapp:war:#{CAS_WEBAPP_VERSION}"
 COLLABORATION_WAR = "com.intalio.collaboration:collaboration:war:#{COLLABORATION_VERSION}"
+COLLABORATION_JAR = "com.intalio.collaboration:collaboration:jar:#{COLLABORATION_VERSION}"
 DATABASE_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.jdbc.runtime:mar:#{PXE_DATABASE_CONNECTOR_VERSION}"
 FDS_MODULE = "org.intalio.tempo:tempo-fds:mar:#{FDS_VERSION}"
 FDS_WAR = "org.intalio.tempo:tempo-fds:war:#{FDS_VERSION}"
@@ -36,7 +37,9 @@ FDS_JAR = "org.intalio.tempo:tempo-fds:jar:#{FDS_VERSION}"
 JDBC_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.jdbc.runtime:mar:#{PXE_JDBC_CONNECTOR_VERSION}"
 MONITORING_WAR = "com.intalio.bpms.monitoring:intalio-bpms-monitoring-webapp:war:#{MONITORING_VERSION}"
 MOBILE_WORKFLOW_WAR = "com.intalio.mobi:mobi:war:#{MOBI_VERSION}"
+MOBILE_WORKFLOW_JAR = "com.intalio.mobi:mobi:jar:#{MOBI_VERSION}"
 SOCIAL_WAR = "com.intalio.social:social:war:#{SOCIAL_VERSION}"
+SOCIAL_JAR = "com.intalio.social:social:jar:#{SOCIAL_VERSION}"
 ODE_VALIDATOR_DIST = "org.apache.ode:ode-validator:zip:#{ODE_VALIDATOR_VERSION}"
 PXE_WAR = "com.intalio.bpms.pxe:ode-axis2-war:war:#{PXE_VERSION}"
 PXE_HA_JDBC_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.jdbc.runtime:mar:#{PXE_HA_JDBC_CONNECTOR_VERSION}"
@@ -45,15 +48,20 @@ PXE_HA_WAR = "com.intalio.bpms.pxe:ode-axis2ha-war:war:#{PXE_HA_VERSION}"
 PXE_HA_XPATH_EXT = "org.intalio.tempo:tempo-processes-xpath-extensions:jar:#{PXE_HA_PROCESSES_VERSION}"
 PXE_HA_TRANSPORT_HANDLER_MAR = "com.intalio.bpms.pxe:ode-axis2-transport-handler:mar:#{PXE_HA_VERSION}"
 PXE_HA_TRANSPORT_HANDLER_JAR = "com.intalio.bpms.pxe:ode-axis2-transport-handler:jar:#{PXE_HA_VERSION}"
+PXE_HA_AGENTS_JAR = "com.intalio.bpms.pxe:ode-agents:jar:#{PXE_HA_VERSION}"
 TEMPO_PXE_INTEGRATION ="org.intalio.tempo:tempo-pxe-integration:jar:#{TEMPO_PXE_INTEGRATION_VERSION}"
 TEMPO_PXE_HA_INTEGRATION ="org.intalio.tempo:tempo-pxe-integration:jar:#{TEMPO_PXE_HA_INTEGRATION_VERSION}"
 TMP_PROCESS_HANDLER ="org.intalio.tmp:tmp-process-handler:mar:#{TMP_PROCESS_HANDLER_VERSION}"
 TMS_SERVICE = "org.intalio.tempo:tempo-tms-service:aar:#{TEMPO_VERSION}"
 UIFW_WAR = "org.intalio.tempo:tempo-ui-fw:war:#{UIFW_VERSION}"
 WDS_WAR = "org.intalio.tempo:tempo-wds-service:war:#{WDS_VERSION}"
+WDS_JAR = "org.intalio.tempo:tempo-wds-service:jar:#{WDS_VERSION}"
 WEBREPORT_WAR = "com.intalio.bpms.bam:bam-webreport:war:#{BAM_SERVICE_VERSION}"
+WEBREPORT_JAR = "com.intalio.bpms.bam:bam-webreport:jar:#{BAM_SERVICE_VERSION}"
 WSI_WAR = "com.intalio.bpms.wsi:intalio-bpms-wsi:war:#{WSI_VERSION}"
-GI_WAR = "com.intalio.bpms.gi:gi-webapp:war:#{GI_WEBAPP_VERSION }"
+WSI_JAR = "com.intalio.bpms.wsi:intalio-bpms-wsi:jar:#{WSI_VERSION}"
+GI_WAR = "com.intalio.bpms.gi:ajax:war:#{GI_WEBAPP_VERSION }"
+GI_JAR = "com.intalio.bpms.gi:ajax:jar:#{GI_WEBAPP_VERSION }"
 XPATH_EXT = "org.intalio.tempo:tempo-processes-xpath-extensions:jar:#{PXE_PROCESSES_VERSION}"
 XFORMS_WAR = "org.intalio.tempo:xforms-manager:war:#{XFORMS_MANAGER_VERSION}"
 BPMS_CONSOLE = "com.intalio.bpms.console:bpms-console:jar:#{BPMS_CONSOLE_VERSION}"
@@ -69,7 +77,10 @@ BATIK = group(%w{
   batik-parser    batik-script      batik-svg-dom   batik-svggen
   batik-swing     batik-transcoder  batik-util      batik-xml},
   :under=>"batik", :version=>"1.6")
-BIRT_WAR  = artifact("org.eclipse.birt:birt-webapp:war:#{BIRT_VERSION}")
+
+BIRT_WAR  = "org.eclipse.birt:birt-webapp:war:#{BIRT_VERSION}"
+BIRT_WAR_ARTIFACT  = artifact(BIRT_WAR)
+
 BTM = {
   :core => "org.codehaus.btm:btm:jar:2.1.3", 
   :tomcatlifecycle => "org.codehaus.btm:btm-tomcat55-lifecycle:jar:2.1.3" 
@@ -155,7 +166,27 @@ AXIS2_MODULES = struct(
            "joda-time:joda-time:jar:1.6.2",
            BACKPORT]
 )
+BCPROV_JDK15 = "bouncycastle:bcprov-jdk15:jar:140"
+RAMPART = group("rampart-core", "rampart-policy", "rampart-trust", :under=>"org.apache.rampart", :version=>"1.6.2")
+AXIS2_MODULE_LIBS = ["org.apache.ws.security:wss4j:jar:1.6.4",
+           "org.apache.santuario:xmlsec:jar:1.4.6",
+           "org.apache.axis2:mex:jar:impl:1.6.2",
+           "org.opensaml:opensaml:jar:2.5.1-1",
+           "bouncycastle:bcprov-jdk15:jar:140",
+           "org.opensaml:xmltooling:jar:1.3.2-1",
+           "org.apache.velocity:velocity:jar:1.5",
+           "org.opensaml:openws:jar:1.4.2-1",
+           "org.owasp.esapi:esapi:jar:2.0GA",
+           "joda-time:joda-time:jar:1.6.2"]
 TAS_ALFRESCO = group("axis", "web-service-client", "wss4j", "saaj", "bcprov-jdk15-137",  "jaxrpc",  "xalan",  "opensaml",  "xmlsec-1.4.1",  "activation",  "wsdl4j",  "mail",  :under => "alfresco", :version => "2.9.0B")
+
+TEMPO_ALFRESCO_INTEGRATION = "com.intalio.tempo:tempo-alfresco-integration:jar:#{TEMPO_VERSION}"
+
+ALFRESCO_AXIS =  "alfresco:axis:jar:2.9.0B"
+ALFRESCO_JAXRPC =  "alfresco:jaxrpc:jar:2.9.0B"
+ALFRESCO_SAAJ = "alfresco:saaj:jar:2.9.0B"
+ALFRESCO_WEBSERVICECLIENT = "alfresco:web-service-client:jar:2.9.0B"
+
 JACKSON = ["org.codehaus.jackson:jackson-mapper-asl:jar:1.9.9","org.codehaus.jackson:jackson-core-asl:jar:1.9.9"]
 HIBERNATE_VALIDATOR = "org.hibernate:hibernate-validator:jar:3.0.0.ga"
 HIBERNATE = [
@@ -173,17 +204,6 @@ PXE_HIBERNATE = ["javassist:javassist:jar:3.12.0.GA",
                  "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final",
                  "org.hibernate:hibernate-core:jar:3.6.9.Final",
                  "asm:asm:jar:1.5.3",
-                 "org.hibernate:hibernate-entitymanager:jar:3.6.9.Final",
-                 #"org.hibernate:hibernate-annotations:jar:3.5.6-Final",
-                 "antlr:antlr:jar:2.7.6",
-                 "cglib:cglib:jar:2.1_3",
-                 "net.sf.ehcache:ehcache:jar:1.2.3",
-                 "org.hibernate:hibernate-validator:jar:3.1.0.GA"]
-
-HIBERNATE_3_X = ["javassist:javassist:jar:3.12.0.GA",
-                 "org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final",
-                 "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final",
-                 "org.hibernate:hibernate-core:jar:3.6.9.Final", "asm:asm:jar:1.5.3",
                  "org.hibernate:hibernate-entitymanager:jar:3.6.9.Final",
                  #"org.hibernate:hibernate-annotations:jar:3.5.6-Final",
                  "antlr:antlr:jar:2.7.6",
@@ -323,10 +343,18 @@ WSI_ORBEON_LIBS = [
 #Intalio modules#
 
 DEPLOY_CLUSTERING  = ["org.intalio.deploy:deploy-impl:jar:#{AXIS2SERVICES_DEPLOY_WS_VERSION}","org.springframework:spring:jar:2.5.5"]
-INTALIO_DEPLOY = group("deploy-api", "deploy-ws-common", "deploy-ws-client", :under=>"org.intalio.deploy",:version=>"#{AXIS2SERVICES_DEPLOY_WS_VERSION}")
+INTALIO_DEPLOY = group("deploy-impl", "deploy-api", "deploy-ws-common", "deploy-ws-client", :under=>"org.intalio.deploy",:version=>"#{AXIS2SERVICES_DEPLOY_WS_VERSION}")
 ODE_LIBS = {
   :odeaxis2 => "com.intalio.bpms.pxe:ode-axis2:jar:#{ODE_VERSION}",
   :odebpelapi => "com.intalio.bpms.pxe:ode-bpel-api:jar:#{ODE_VERSION}",
+  :odebpeldao => "com.intalio.bpms.pxe:ode-bpel-dao:jar:#{ODE_VERSION}",
+  :odedaohb => "com.intalio.bpms.pxe:ode-dao-hibernate:jar:#{ODE_VERSION}",
+  :odedaojpa => "com.intalio.bpms.pxe:ode-dao-jpa:jar:#{ODE_VERSION}",
+  :odebpelql => "com.intalio.bpms.pxe:ode-bpel-ql:jar:#{ODE_VERSION}",
+  :odebpelstore => "com.intalio.bpms.pxe:ode-bpel-store:jar:#{ODE_VERSION}",
+  :odejacob => "com.intalio.bpms.pxe:ode-jacob:jar:#{ODE_VERSION}",
+  :odepxecluster => "com.intalio.bpms.pxe:ode-pxe-cluster:jar:#{ODE_VERSION}",
+  :odeschedulersimple => "com.intalio.bpms.pxe:ode-scheduler-simple:jar:#{ODE_VERSION}",
   :odebpelapijca => "com.intalio.bpms.pxe:ode-bpel-api-jca:jar:#{ODE_VERSION}",
   :odebpelcompiler =>"com.intalio.bpms.pxe:ode-bpel-compiler:jar:#{ODE_VERSION}",
   :odebpelconnector =>"com.intalio.bpms.pxe:ode-bpel-connector:jar:#{ODE_VERSION}",

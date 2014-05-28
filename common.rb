@@ -22,6 +22,9 @@ APACHE_DERBY_NET = "org.apache.derby:derbynet:jar:#{DERBY_VER}"
 APACHE_DERBY_CLIENT = "org.apache.derby:derbyclient:jar:#{DERBY_VER}"
 APACHE_DS = "org.apache.apacheds:noarch-installer:jar:1.5.1a"
 APACHE_DS_DEPS = "org.apache.apacheds:apacheds-deps:jar:1.5.4"
+
+APACHE_MIME4J = "org.apache.james:apache-mime4j-core:jar:0.7.2"
+
 ASPECTJ = {
 :rt => "org.aspectj:aspectjrt:jar:1.6.12",
 :weaver => "org.aspectj:aspectjweaver:jar:1.6.12" 
@@ -48,7 +51,14 @@ GERONIMO_SPECS = {
   :derby => "org.apache.geronimo:geronimo-derby:jar:1.1",
   :jta => "org.apache.geronimo.specs:geronimo-jta_1.1_spec:jar:1.1",
   :jpa => "org.apache.geronimo.specs:geronimo-jpa_3.0_spec:jar:1.0",
-  :jms => "org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1"
+  :jms => "org.apache.geronimo.specs:geronimo-jms_1.1_spec:jar:1.1.1",
+  :annotation => "org.apache.geronimo.specs:geronimo-annotation_1.0_spec:jar:1.1",
+  :jaxws => "org.apache.geronimo.specs:geronimo-jaxws_2.2_spec:jar:1.0",
+  :saaj => "org.apache.geronimo.specs:geronimo-saaj_1.3_spec:jar:1.0.1",
+  :staxapi => "org.apache.geronimo.specs:geronimo-stax-api_1.0_spec:jar:1.0.1",
+  :wsmetadata => "org.apache.geronimo.specs:geronimo-ws-metadata_2.0_spec:jar:1.1.2",
+  :activation => "org.apache.geronimo.specs:geronimo-activation_1.1_spec:jar:1.0.2",
+  :javamail =>"org.apache.geronimo.specs:geronimo-javamail_1.4_spec:jar:1.2"
 }
 GERONIMO = { 
   :kernel => "org.apache.geronimo.modules:geronimo-kernel:jar:2.0.1",
@@ -61,6 +71,7 @@ GERONIMO = {
   :management => "org.apache.geronimo.specs:geronimo-j2ee-management_1.0_spec:jar:1.1" }
 
 ICU4J = "com.ibm.icu:icu4j:jar:3.4.4"
+JAXWSTOOLS = "com.sun.xml.ws:jaxws-tools:jar:2.1.3"
 JODATIME = "joda-time:joda-time:jar:1.5.2"
 JASYPT = "org.jasypt:jasypt:jar:1.8"
 ICAL = "ical4j:ical4j:jar:0.9.20"
@@ -87,6 +98,13 @@ JAVAX               = struct(
 JAVAMAIL = [ JAVAX[:javamail], "org.apache.geronimo.specs:geronimo-activation_1.1_spec:jar:1.0.2" ]
 TOMCAT_CATALINA = "org.apache.tomcat:catalina:jar:6.0.35"
 JAXEN = "jaxen:jaxen:jar:1.1.1"
+JIBX_BIND = "org.jibx:jibx-bind:jar:1.2"
+JSR311 = {
+:api => "javax.ws.rs:jsr311-api:jar:1.0"
+}
+
+TOMCAT_TRIBES="org.apache.tomcat:tribes:jar:6.0.16"
+
 JDOM = "jdom:jdom:jar:1.0"
 JENCKS = "jencks:jencks-all:jar:1.1.3"
 JSON_TAGLIB = "json:json-taglib:jar:0.4.1"
@@ -103,7 +121,8 @@ NEETHI = "org.apache.neethi:neethi:jar:3.0.2"
 OPENSSO_CLIENT_SDK = "com.sun:openssoclientsdk:jar:3.0"
 PORTLET_API = "portlet-api:portlet-api:jar:1.0"
 QOM = "net.sf.qom:qom:jar:0.1alpha3"
-SUNMAIL = ["javax.mail:mail:jar:1.4.1", SUNACTIVATION]
+SUNMAIL = ["javax.mail:mail:jar:1.4.1"]
+JMS = "javax.jms:jms:jar:1.1"
 SERVLET_API = "javax.servlet:servlet-api:jar:2.4"
 SERVLET_API_25 = "javax.servlet:servlet-api:jar:2.5"
 SHOAL = [ "net.java.dev.shoal:shoal-jxta:jar:1.1-08182009", "net.java.dev.shoal:shoal-gms:jar:1.1-08182009" ]
@@ -119,7 +138,7 @@ SPRING = {
   :test => "org.springframework:spring-test:jar:2.5.6"
 }
 TAGLIBS = [ "taglibs:standard:jar:1.1.2" ]
-URLREWRITE = "org.tuckey:urlrewrite:jar:3.1.0"
+URLREWRITE = "org.tuckey:urlrewritefilter:jar:4.0.4"
 
 WOODSTOX = [ "woodstox:wstx-asl:jar:3.2.4" ]
 WSDL4J = [ "wsdl4j:wsdl4j:jar:1.6.3" ]
@@ -167,10 +186,14 @@ INSTINCT = [
   "org.jmock:jmock-legacy:jar:2.5.0",
   "cglib:cglib-nodep:jar:2.1_3",
   "org.hamcrest:hamcrest-all:jar:1.1",
-  "org.objenesis:objenesis:jar:1.1",
-  JUNIT,
-  ANT
+  "org.objenesis:objenesis:jar:1.1"
 ]
+
+APACHE_ABDERA_LIB = "apache.incubator:abdera:jar:0.4.0-incubating"
+EZMORPH = "net.sf.ezmorph:ezmorph:jar:1.0.4"
+HTML_PARSER = "org.htmlparser:htmlparser:jar:1.0.5"
+JSON_LIB = "net.sf.json-lib:json-lib:jar:2.2.1-jdk15"
+XML_SECURITY = "xml-security:xmlsec:jar:1.3.0"
 
 APACHE_ABDERA = [
   AXIOM,
@@ -180,16 +203,16 @@ APACHE_ABDERA = [
   APACHE_COMMONS[:httpclient],
   APACHE_COMMONS[:lang],
   APACHE_COMMONS[:logging],
-  "net.sf.ezmorph:ezmorph:jar:1.0.4",
+  EZMORPH,
   STAX_API,
   JAVAMAIL,
-  "org.htmlparser:htmlparser:jar:1.0.5",
+  HTML_PARSER,
   JAXEN,
-  "net.sf.json-lib:json-lib:jar:2.2.1-jdk15",
+  JSON_LIB,
   WOODSTOX,
   XALAN,
-  "xml-security:xmlsec:jar:1.3.0",
-  "apache.incubator:abdera:jar:0.4.0-incubating"  
+  XML_SECURITY,
+  APACHE_ABDERA_LIB
 ]
 
 HTTPCORE = "org.apache.httpcomponents:httpcore:jar:4.0"
@@ -200,12 +223,20 @@ AXIS2 = {
   :kernel => "org.apache.axis2:axis2-kernel:jar:1.6.2",
   :adb => "org.apache.axis2:axis2-adb:jar:1.6.2",
   :codegen => "org.apache.axis2:axis2-codegen:jar:1.6.2",
+  :adbcodegen => "org.apache.axis2:axis2-adb-codegen:jar:1.6.2",
+  :clustering => "org.apache.axis2:axis2-clustering:jar:1.6.2",
+  :corba => "org.apache.axis2:axis2-corba:jar:1.6.2",
+  :fastinfoset => "org.apache.axis2:axis2-fastinfoset:jar:1.6.2",
   :java2wsdl => "org.apache.axis2:axis2-java2wsdl:jar:1.6.2",
+  :jaxbri => "org.apache.axis2:axis2-jaxbri:jar:1.6.2",
   :jibx => "org.apache.axis2:axis2-jibx:jar:1.6.2",
   :jaxws => "org.apache.axis2:axis2-jaxws:jar:1.6.2",
   :saaj => "org.apache.axis2:axis2-saaj:jar:1.6.2",
+  :soapmonitorservlet => "org.apache.axis2:axis2-soapmonitor-servlet:jar:1.6.2",
+  :spring => "org.apache.axis2:axis2-spring:jar:1.6.2",
   :xmlbeans => "org.apache.axis2:axis2-xmlbeans:jar:1.6.2",
   :json => "org.apache.axis2:axis2-json:jar:1.6.2",
+  :metadata => "org.apache.axis2:axis2-metadata:jar:1.6.2",
   :mtompolicy => "org.apache.axis2:axis2-mtompolicy:jar:1.6.2",
   :transport => "org.apache.axis2:axis2-transports:jar:1.0-i6",
   :wodenimpldom => "org.apache.woden:woden-impl-dom:jar:1.0M9",
@@ -213,8 +244,23 @@ AXIS2 = {
   :backport => BACKPORT,
   :neethi => NEETHI,
   :sunmail => SUNMAIL,
+  :activation => SUNACTIVATION,
   :httpcore => HTTPCORE
 }
+
+AXIS2_JAXWS_MAR = "org.apache.axis2:axis2-jaxws-mar:mar:1.6.2"
+MTOMPOLICY_MAR = "org.apache.axis2:mtompolicy:mar:1.6.2"
+PING_MAR = "org.apache.axis2:ping:mar:1.6.2"
+SOAPMONITOR_MAR = "org.apache.axis2:soapmonitor:mar:1.6.2"
+SCRIPTING_MAR = "org.apache.axis2:scripting:mar:1.6.2"
+
+
+WODEN = {
+	:implcommons => "org.apache.woden:woden-impl-commons:jar:1.0M9"
+}
+
+XML_RESOLVER =  "xml-resolver:xml-resolver:jar:1.2"
+
 
 ALFRESCO = [
   "com.alfresco:alfresco-web-client:jar:2.1.0",
@@ -257,6 +303,8 @@ APACHE_JPA = APACHE_JPA_2_0_0
 FREEMARKER = "org.freemarker:freemarker:jar:2.3.14"
 AOPALLIANCE ="aopalliance:aopalliance:jar:1.0"
 
+BCEL = "bcel:bcel:jar:5.1"
+
 CAS_LIBS = [
   group("cas-server-core",:under=>"org.jasig.cas", :version=>"3.2.1.1"),
   group("cas-server-support-ldap",:under=>"org.jasig.cas", :version=>"3.2.1.1"),
@@ -290,8 +338,17 @@ CAS_LIBS = [
   "xml-security:xmlsec:jar:1.4.0",  "taglibs:standard:jar:1.1.2"
 ]
 
+JAXB = {
+:api => "javax.xml.bind:jaxb-api:jar:2.1",
+:impl => "com.sun.xml.bind:jaxb-impl:jar:2.1.7",
+:xjc => "com.sun.xml.bind:jaxb-xjc:jar:2.1.7"
+}
+
 DEPLOY_API = "org.intalio.deploy:deploy-api:jar:#{AXIS2SERVICES_DEPLOY_WS_VERSION}"
 REGISTRY = "org.intalio.deploy:deploy-registry:jar:#{AXIS2SERVICES_DEPLOY_WS_VERSION}"
+
+REGEXP = "regexp:regexp:jar:1.2"
+
 SECURITY = { 
   :client => "org.intalio.security:security-ws-client:jar:#{INTALIO_SECURITY_VERSION}",
   :nutbolts => "org.intalio.security:security-web-nutsNbolts:jar:#{INTALIO_SECURITY_VERSION}",
@@ -301,6 +358,15 @@ SECURITY = {
 SPRING_JSON = ["net.sf.spring-json:spring-json:jar:1.3.1"]
 SOJO_OPTIONAL = ["net.sf:sojo-optional:jar:0.5.0"]
 SOJO = [ "net.sf.sojo:sojo:jar:1.0.5","net.sf:sojo-optional:jar:0.5.0" ]
+
+RSYNTAXTEXTAREA = "com.fifesoft:rsyntaxtextarea:jar:2.5.0"
+SOAPUI = "com.smartbear.eviware:soapui:jar:5.0.0"
+PROXY_VOLE = "com.btr:proxy-vole:jar:20131209"
+
+HTTP_CLIENT_411 = ["org.apache.httpcomponents:httpclient:jar:4.1.1",
+               "org.apache.httpcomponents:httpclient-cache:jar:4.1.1",
+               "org.apache.httpcomponents:httpcore:jar:4.1.1",
+               "org.apache.httpcomponents:httpcore-nio:jar:4.1.1"]
 
 # the list of dependencies below has been generated
 ORBEON_LIBS = ["orbeon:activation-1_0_2:jar:3.8.0.201005141856-CE",
@@ -382,3 +448,14 @@ ORBEON_LIBS = ["orbeon:activation-1_0_2:jar:3.8.0.201005141856-CE",
 "orbeon:xerces-xml-apis-2_9_orbeon_20070711:jar:3.8.0.201005141856-CE",
 "orbeon:xmlgraphics-commons-1_1:jar:3.8.0.201005141856-CE"
 ]
+
+HIBERNATE_3_X = ["javassist:javassist:jar:3.12.0.GA",
+                 "org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final",
+                 "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final",
+                 "org.hibernate:hibernate-core:jar:3.6.9.Final", "asm:asm:jar:1.5.3",
+                 "org.hibernate:hibernate-entitymanager:jar:3.6.9.Final",
+                 #"org.hibernate:hibernate-annotations:jar:3.5.6-Final",
+                 "antlr:antlr:jar:2.7.6",
+                 "cglib:cglib:jar:2.1_3",
+                 "net.sf.ehcache:ehcache:jar:1.2.3",
+                 "org.hibernate:hibernate-validator:jar:3.1.0.GA"]
