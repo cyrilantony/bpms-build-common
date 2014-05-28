@@ -218,6 +218,27 @@ class CommonFunctions
 	    end
 	end
 
+	def self.addFilterMappingWithUrlMappingWithDispatcher(doc, filterNode, urlMappings)
+	    urlMappings.each do |urlMapping|
+		filterMappingNode = Nokogiri::XML::Node.new "filter-mapping", doc
+
+		filterNameNode = Nokogiri::XML::Node.new "filter-name", doc
+		filterNameNode.content = filterNode.css("filter-name").first.content
+
+		filterRequestDispatcherNode = Nokogiri::XML::Node.new "dispatcher", doc
+		filterRequestDispatcherNode.content = "REQUEST"
+
+		filterForwardDispatcherNode = Nokogiri::XML::Node.new "dispatcher", doc
+		filterForwardDispatcherNode.content = "FORWARD"
+
+		filterMappingNode.add_child(filterNameNode)
+		filterMappingNode.add_child(urlMapping)
+		filterMappingNode.add_child(filterRequestDispatcherNode)
+		filterMappingNode.add_child(filterForwardDispatcherNode)
+		filterNode.add_next_sibling(filterMappingNode)
+	    end
+	end
+
 	def self.writeWebApplicationContext(doc, path)
 	    file = File.open(path, "w")
 	    file.write(doc.to_xml)
