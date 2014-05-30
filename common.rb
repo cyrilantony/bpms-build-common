@@ -254,6 +254,8 @@ PING_MAR = "org.apache.axis2:ping:mar:1.6.2"
 SOAPMONITOR_MAR = "org.apache.axis2:soapmonitor:mar:1.6.2"
 SCRIPTING_MAR = "org.apache.axis2:scripting:mar:1.6.2"
 
+AXIS2_VERSION_AAR = "org.apache.axis2:version:aar:1.6.2"
+
 
 WODEN = {
 	:implcommons => "org.apache.woden:woden-impl-commons:jar:1.0M9"
