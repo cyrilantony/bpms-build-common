@@ -32,6 +32,7 @@ ASPECTJ = {
 AXIOM = group("axiom-api", "axiom-dom", "axiom-impl",:under=>"org.apache.ws.commons.axiom", :version=>"1.2.13")
 BACKPORT = "backport-util-concurrent:backport-util-concurrent:jar:3.1"
 BPMS_COMMON = ["com.intalio.bpms.common:bpms-common:jar:#{BPMS_COMMON_VERSION}"]
+BPMS_UTILS = ["com.intalio.bpms.common:bpms-utils:jar:#{BPMS_COMMON_VERSION}"]
 CASTOR = "castor:castor:jar:1.0"
 CASTOR_CODEHAUS = {
   :base => "org.codehaus.castor:castor:jar:1.2",
@@ -125,6 +126,7 @@ SUNMAIL = ["javax.mail:mail:jar:1.4.1"]
 JMS = "javax.jms:jms:jar:1.1"
 SERVLET_API = "javax.servlet:servlet-api:jar:2.4"
 SERVLET_API_25 = "javax.servlet:servlet-api:jar:2.5"
+SERVLET_API_30 = "javax.servlet:javax.servlet-api:jar:3.1.0"
 SHOAL = [ "net.java.dev.shoal:shoal-jxta:jar:1.1-08182009", "net.java.dev.shoal:shoal-gms:jar:1.1-08182009" ]
 SLF4J = {:api => "org.slf4j:slf4j-api:jar:1.7.6",
          :log4j12 => "org.slf4j:slf4j-log4j12:jar:1.7.6",
