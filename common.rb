@@ -25,6 +25,8 @@ APACHE_DS_DEPS = "org.apache.apacheds:apacheds-deps:jar:1.5.4"
 
 APACHE_MIME4J = "org.apache.james:apache-mime4j-core:jar:0.7.2"
 
+H2_DB = "com.h2database:h2:jar:1.1.117"
+
 ASPECTJ = {
 :rt => "org.aspectj:aspectjrt:jar:1.6.12",
 :weaver => "org.aspectj:aspectjweaver:jar:1.6.12" 
