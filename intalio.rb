@@ -5,9 +5,9 @@ TMP_PROCESS_HANDLER_COMPONENT=[["security", INTALIO_SECURITY_VERSION]]
 /#FOR CE VERSION#/
 PXE_COMPONENTS =  [["database-connector",PXE_DATABASE_CONNECTOR_VERSION], ["helloworld-process",PXE_HELLOWORLD_VERSION],["jdbc-connector", PXE_JDBC_CONNECTOR_VERSION],["registry",PXE_REGISTRY_VERSION], ["tempo-pxe-integration",TEMPO_PXE_INTEGRATION_VERSION], ["workflow-processes",PXE_PROCESSES_VERSION]]
 AXIS2_COMPONENTS = [["deploy-ws-service",AXIS2SERVICES_DEPLOY_WS_VERSION],["tempo-tms-service", TEMPO_VERSION],["tempo-tas-service",TEMPO_VERSION],["security-ws-service", INTALIO_SECURITY_VERSION]]
-COMPONENTS = [["pxe",PXE_VERSION,PXE_COMPONENTS], ["bpms-console", BPMS_CONSOLE_VERSION, ""], ["bpms-dashboard",BPMS_DASHBOARD_VERSION,""],["ode-validator", ODE_VALIDATOR_VERSION,""], ["axis2-services",AXIS2SERVICES_DEPLOY_WS_VERSION,AXIS2_COMPONENTS], ["gi-webapp",GI_WEBAPP_VERSION,""], ["wsi",WSI_VERSION,""], ["ui-fw",UIFW_VERSION,""], ["wds", WDS_VERSION,""], ["xforms-manager",XFORMS_MANAGER_VERSION, ""],["tomcat-5",TOMCAT_5_VERSION,""],["server-common","",""],["tmp-process-handler", TMP_PROCESS_HANDLER_VERSION,TMP_PROCESS_HANDLER_COMPONENT], ["social", SOCIAL_VERSION, ""]]
+COMPONENTS = [["pxe",PXE_VERSION,PXE_COMPONENTS], ["bpms-console", BPMS_CONSOLE_VERSION, ""], ["bpms-dashboard",BPMS_DASHBOARD_VERSION,""],["ode-validator", ODE_VALIDATOR_VERSION,""], ["axis2-services",AXIS2SERVICES_DEPLOY_WS_VERSION,AXIS2_COMPONENTS], ["gi-webapp",GI_WEBAPP_VERSION,""], ["wsi",WSI_VERSION,""], ["ui-fw",UIFW_VERSION,""], ["wds", WDS_VERSION,""], ["xforms-manager",XFORMS_MANAGER_VERSION, ""],["server-common","",""],["tmp-process-handler", TMP_PROCESS_HANDLER_VERSION,TMP_PROCESS_HANDLER_COMPONENT], ["social", SOCIAL_VERSION, ""]]
 DATABASE_COMPONENTS = [["derby",DERBY_VER],["mysql",MYSQL_VERSION]]
-SERVER_NAMES =[["tomcat-5",TOMCAT_5_VERSION]]
+SERVER_NAMES =[["tomcat-7",TOMCAT_7_VERSION]]
 CHOICES = [DATABASE_COMPONENTS, SERVER_NAMES]#Do not change the order of this. Incase an extra parrameter is added add it to the end.
 
 /#FOR EE VERSION#/
