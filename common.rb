@@ -17,6 +17,9 @@ APACHE_COMMONS = {
   :primitives       =>"commons-primitives:commons-primitives:jar:1.0",
   :validator => "commons-validator:commons-validator:jar:1.2.0"
 }
+
+INTALIO_LICENSE = "com.intalio.bpms.license:license-core:jar:#{INTALIO_LICENSE_VERSION}"
+
 APACHE_DERBY = "org.apache.derby:derby:jar:#{DERBY_VER}"
 APACHE_DERBY_NET = "org.apache.derby:derbynet:jar:#{DERBY_VER}"
 APACHE_DERBY_CLIENT = "org.apache.derby:derbyclient:jar:#{DERBY_VER}"

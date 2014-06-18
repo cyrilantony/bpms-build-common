@@ -82,7 +82,7 @@ GERONIMO_JETTY = "org.apache.geronimo:geronimo-jetty6-jee5:zip:2.0.1"
 GSON = ["com.google.code.gson:gson:jar:1.7.1"]
 HSQLDB = "hsqldb:hsqldb:jar:1.8.0.7"
 INGRES_OPENJPA = "com.ingres.jdbc:openjpa-jdbc-ingres:jar:0.1.0"
-INTALIO_LICENSE = "com.intalio.bpms.license:license-core:jar:#{INTALIO_LICENSE_VERSION}"
+
 INTALIO_LICENSE_GEN = "com.intalio.bpms.license:license-generator:jar:#{INTALIO_LICENSE_VERSION}"
 JBI  = group("org.apache.servicemix.specs.jbi-api-1.0", :under=>"org.apache.servicemix.specs", :version=>"1.1.0")
 JBOSS = "jboss:jboss-appserver:zip:#{JBOSS_VERSION}"
