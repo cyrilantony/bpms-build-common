@@ -181,7 +181,7 @@ AXIS2_MODULE_LIBS = ["org.apache.ws.security:wss4j:jar:1.6.4",
 TAS_ALFRESCO = group("axis", "web-service-client", "wss4j", "saaj", "bcprov-jdk15-137",  "jaxrpc",  "xalan",  "opensaml",  "xmlsec-1.4.1",  "activation",  "wsdl4j",  "mail",  :under => "alfresco", :version => "2.9.0B")
 
 TEMPO_ALFRESCO_INTEGRATION = "com.intalio.tempo:tempo-alfresco-integration:jar:#{TEMPO_VERSION}"
-
+ORGANIZATION_MAPPING = "org.intalio.tempo:tempo-organization-mapping:jar:#{TEMPO_VERSION}"
 ALFRESCO_AXIS =  "alfresco:axis:jar:2.9.0B"
 ALFRESCO_JAXRPC =  "alfresco:jaxrpc:jar:2.9.0B"
 ALFRESCO_SAAJ = "alfresco:saaj:jar:2.9.0B"
