@@ -217,7 +217,7 @@ SQLSERVER_DRIVER = "microsoft:sqljdbc:jar:#{SQLSERVER_VERSION}"
 INGRES_DRIVER = "com.ingres.jdbc:iijdbc:jar:#{INGRES_VERSION}"
 SYBASE_DRIVER = "sybase:jconnect:jar:#{SYBASE_VERSION}"
 ORACLE_DRIVER = "oracle.jdbc:oracle-jdbc:jar:#{ORACLE_VERSION}"
-JTDS_DRIVER="net.sourceforge.jtds:jtds:jar:1.2.4"
+JTDS_DRIVER="net.sourceforge.jtds:jtds:jar:#{JTDS_VERSION}"
 
 TOMCAT_5 = "org.apache.tomcat:apache-tomcat:zip:#{TOMCAT_5_VERSION}"
 TOMCAT_6 = "org.apache.tomcat:apache-tomcat:zip:#{TOMCAT_6_VERSION}"
