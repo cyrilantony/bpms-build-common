@@ -467,3 +467,5 @@ HIBERNATE_3_X = ["javassist:javassist:jar:3.12.0.GA",
                  "org.hibernate:hibernate-validator:jar:3.1.0.GA"]
 
 STANDARD_JTA = "javax.transaction:jta:jar:1.1"
+
+JAVACRYPTION = "org:javacryption:jar:1.0"
