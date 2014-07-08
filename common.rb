@@ -385,3 +385,5 @@ ORBEON_LIBS = ["orbeon:activation-1_0_2:jar:3.8.0.201005141856-CE",
 "orbeon:xerces-xml-apis-2_9_orbeon_20070711:jar:3.8.0.201005141856-CE",
 "orbeon:xmlgraphics-commons-1_1:jar:3.8.0.201005141856-CE"
 ]
+
+JAVACRYPTION = "org:javacryption:jar:1.0"
