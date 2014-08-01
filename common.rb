@@ -469,3 +469,14 @@ HIBERNATE_3_X = ["javassist:javassist:jar:3.12.0.GA",
 STANDARD_JTA = "javax.transaction:jta:jar:1.1"
 
 JAVACRYPTION = "org:javacryption:jar:1.0"
+
+OPENSAML = [
+APACHE_COMMONS[:collections],
+APACHE_COMMONS[:lang],
+JODATIME,
+"velocity:velocity:jar:1.5",
+"org.opensaml:xmltooling:jar:1.3.1",
+"xml-security:xmlsec:jar:1.4.0",
+"org.opensaml:opensaml:jar:2.5.1-1",
+"org.opensaml:openws:jar:1.4.2-1"
+]
