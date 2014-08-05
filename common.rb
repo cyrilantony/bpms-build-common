@@ -396,5 +396,6 @@ JODATIME,
 "org.opensaml:xmltooling:jar:1.3.1",
 "xml-security:xmlsec:jar:1.4.0",
 "org.opensaml:opensaml:jar:2.5.1-1",
-"org.opensaml:openws:jar:1.4.2-1"
+"org.opensaml:openws:jar:1.4.2-1",
+"org.owasp.esapi:esapi:jar:2.0GA"
 ]
