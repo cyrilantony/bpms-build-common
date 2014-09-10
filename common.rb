@@ -1,4 +1,5 @@
 ANT = [ "org.apache.ant:ant:jar:1.8.3" ]
+ANT_LAUNCHER = ["org.apache.ant:ant-launcher:jar:1.8.3"]
 APACHE_COMMONS = {
   :beanutils => "commons-beanutils:commons-beanutils:jar:1.8.3",
   :cli => "commons-cli:commons-cli:jar:1.1",
@@ -49,6 +50,12 @@ DB_CONNECTOR = {
 }
 DSIG = "javax.xml.xmldsig:xmldsig:jar:1.0"
 DOM4J = "dom4j:dom4j:jar:1.6.1"
+
+DROOLS_TEMPLATE = "org.drools:drools-templates:jar:5.0.0.M5"
+
+ECLIPSE_JFACE = "org.eclipse:jface:jar:3.4.0.I20080606-1300"
+STAX_UTILS = "net.java.dev.stax-utils:stax-utils:jar:20070216"
+
 FOP = [ "fop:fop:jar:0.20.5" ]
 GERONIMO_SPECS = {
   :derby => "org.apache.geronimo:geronimo-derby:jar:1.1",

@@ -368,6 +368,13 @@ ODE_LIBS = {
   :odebpelruntime => "com.intalio.bpms.pxe:ode-bpel-runtime:jar:#{ODE_VERSION}"
 }
 
+BRE_RUNTIME = {
+  :dtdeployment => "com.intalio.bpms.designer.bre:com.intalio.bre-dtdeployment:jar:#{BRE_VERSION}",
+  :dtbuilder => "com.intalio.bpms.designer.bre:com.intalio.bre-dtbuilder:jar:#{BRE_VERSION}",
+  :dtmodel => "com.intalio.bpms.designer.bre:com.intalio.bre-dtmodel:jar:#{BRE_VERSION}" ,
+  :dteditor => "com.intalio.bpms.designer.bre:com.intalio.bre-dteditor:jar:#{BRE_VERSION}"
+ }
+
 PXE = ODE_LIBS
 
 CONSOLE = ["com.intalio.bpms.console-common:console-common-webapp:jar:#{BPMS_CONSOLE_VERSION}",
