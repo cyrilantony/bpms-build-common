@@ -26,6 +26,8 @@ APACHE_DS_DEPS = "org.apache.apacheds:apacheds-deps:jar:1.5.4"
 
 APACHE_MIME4J = "org.apache.james:apache-mime4j-core:jar:0.7.2"
 
+ASM_32 = "asm:asm:jar:3.2"
+
 H2_DB = "com.h2database:h2:jar:1.1.117"
 
 ASPECTJ = {
@@ -465,7 +467,7 @@ ORBEON_LIBS = ["orbeon:activation-1_0_2:jar:3.8.0.201005141856-CE",
 HIBERNATE_3_X = ["javassist:javassist:jar:3.12.0.GA",
                  "org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final",
                  "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final",
-                 "org.hibernate:hibernate-core:jar:3.6.9.Final", "asm:asm:jar:1.5.3",
+                 "org.hibernate:hibernate-core:jar:3.6.9.Final", "asm:asm:jar:3.2",
                  "org.hibernate:hibernate-entitymanager:jar:3.6.9.Final",
                  #"org.hibernate:hibernate-annotations:jar:3.5.6-Final",
                  "antlr:antlr:jar:2.7.6",

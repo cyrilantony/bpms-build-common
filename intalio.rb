@@ -31,6 +31,7 @@ CAS_WEBAPP_WAR = "org.intalio.tempo:cas-webapp:war:#{CAS_WEBAPP_VERSION}"
 COLLABORATION_WAR = "com.intalio.collaboration:collaboration:war:#{COLLABORATION_VERSION}"
 COLLABORATION_JAR = "com.intalio.collaboration:collaboration:jar:#{COLLABORATION_VERSION}"
 DATABASE_CONNECTOR = "com.intalio.bpms.connectors:com.intalio.bpms.connectors.jdbc.runtime:mar:#{PXE_DATABASE_CONNECTOR_VERSION}"
+BRE_DTDEPLOYMENT_WAR ="com.intalio.bpms.designer.bre:com.intalio.bre-dtdeployment:war:#{BRE_VERSION}"
 FDS_MODULE = "org.intalio.tempo:tempo-fds:mar:#{FDS_VERSION}"
 FDS_WAR = "org.intalio.tempo:tempo-fds:war:#{FDS_VERSION}"
 FDS_JAR = "org.intalio.tempo:tempo-fds:jar:#{FDS_VERSION}"
@@ -195,7 +196,7 @@ HIBERNATE = [
   "org.hibernate:hibernate-commons-annotations:jar:3.3.0.ga",
   "org.hibernate:hibernate-tools:jar:3.2.0.beta9a",
   "cglib:cglib:jar:2.1_3",
-  "asm:asm:jar:1.5.3"]
+  "asm:asm:jar:3.2"]
 
 CONNECTOR_JDBC_CORE = "com.intalio.bpms.connectors:com.intalio.bpms.connectors-jdbc-core:jar:#{CONNECTOR_JDBC_VERSION}"
 
@@ -203,7 +204,7 @@ PXE_HIBERNATE = ["javassist:javassist:jar:3.12.0.GA",
                  "org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final",
                  "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final",
                  "org.hibernate:hibernate-core:jar:3.6.9.Final",
-                 "asm:asm:jar:1.5.3",
+                 "asm:asm:jar:3.2",
                  "org.hibernate:hibernate-entitymanager:jar:3.6.9.Final",
                  #"org.hibernate:hibernate-annotations:jar:3.5.6-Final",
                  "antlr:antlr:jar:2.7.6",
