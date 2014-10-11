@@ -224,7 +224,7 @@ JTDS_DRIVER="net.sourceforge.jtds:jtds:jar:#{JTDS_VERSION}"
 
 TOMCAT_5 = "org.apache.tomcat:apache-tomcat:zip:#{TOMCAT_5_VERSION}"
 TOMCAT_6 = "org.apache.tomcat:apache-tomcat:zip:#{TOMCAT_6_VERSION}"
-TOMCAT_7 = "org.apache.tomcat:apache-tomcat:zip:#{TOMCAT_7_VERSION}"
+TOMCAT_7 = "org.apache.tomcat:tomcat:zip:#{TOMCAT_7_VERSION}"
 TOMCAT_DERBY="com.intalio.bpms.derby:derby-tomcat-resource:jar:#{
 BPMS_DERBY_TOMCAT_VERSION}"
 TOMCAT_H2="com.intalio.bpms.h2database:h2-tomcat-resource:jar:#{
