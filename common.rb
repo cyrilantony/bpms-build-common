@@ -123,7 +123,7 @@ JSON_TAGLIB = "json:json-taglib:jar:0.4.1"
 JETTY = group("jetty", "jetty-util", :under=>"org.mortbay.jetty",:version=>"6.1.10")
 JSON_NAGGIT = "org.apache:naggit:jar:1.0.20080807"
 JSP_API = "javax.servlet:jsp-api:jar:2.0"
-JSTL = [ "javax.servlet:jstl:jar:1.1.2" ]
+JSTL = [ "javax.servlet:jstl:jar:1.2" ]
 JUNIT = "junit:junit:jar:4.4"
 JYAML = "org.jyaml:jyaml:jar:1.3"
 LIFERAY = group("portal-impl", "portal-kernel", "util-java", "portal-service",:under=>"com.liferay", :version=>"5.2.0")
@@ -339,7 +339,7 @@ CAS_LIBS = [
   "net.sf.jsr107cache:jsr107cache:jar:1.0",
   "inspektr:core:jar:0.6.1",
   "oro:oro:jar:2.0.8",
-  "jstl:jstl:jar:1.1.2",
+  JSTL,
   LOG4J,
   "ognl:ognl:jar:2.6.9",
   "opensaml:opensaml:jar:1.1b",
