@@ -6,7 +6,7 @@ TMP_PROCESS_HANDLER_COMPONENT=[["security", INTALIO_SECURITY_VERSION]]
 PXE_COMPONENTS =  [["database-connector",PXE_DATABASE_CONNECTOR_VERSION], ["helloworld-process",PXE_HELLOWORLD_VERSION],["jdbc-connector", PXE_JDBC_CONNECTOR_VERSION],["registry",PXE_REGISTRY_VERSION], ["tempo-pxe-integration",TEMPO_PXE_INTEGRATION_VERSION], ["workflow-processes",PXE_PROCESSES_VERSION]]
 AXIS2_COMPONENTS = [["deploy-ws-service",AXIS2SERVICES_DEPLOY_WS_VERSION],["tempo-tms-service", TEMPO_VERSION],["tempo-tas-service",TEMPO_VERSION],["security-ws-service", INTALIO_SECURITY_VERSION]]
 COMPONENTS = [["pxe",PXE_VERSION,PXE_COMPONENTS], ["bpms-console", BPMS_CONSOLE_VERSION, ""], ["bpms-dashboard",BPMS_DASHBOARD_VERSION,""],["ode-validator", ODE_VALIDATOR_VERSION,""], ["axis2-services",AXIS2SERVICES_DEPLOY_WS_VERSION,AXIS2_COMPONENTS], ["gi-webapp",GI_WEBAPP_VERSION,""], ["wsi",WSI_VERSION,""], ["ui-fw",UIFW_VERSION,""], ["wds", WDS_VERSION,""], ["xforms-manager",XFORMS_MANAGER_VERSION, ""],["tomcat-5",TOMCAT_5_VERSION,""],["server-common","",""],["tmp-process-handler", TMP_PROCESS_HANDLER_VERSION,TMP_PROCESS_HANDLER_COMPONENT], ["social", SOCIAL_VERSION, ""]]
-DATABASE_COMPONENTS = [["derby",DERBY_VER],["mysql",MYSQL_VERSION]]
+DATABASE_COMPONENTS = [["h2",H2_VER],["mysql",MYSQL_VERSION]]
 SERVER_NAMES =[["tomcat-5",TOMCAT_5_VERSION]]
 CHOICES = [DATABASE_COMPONENTS, SERVER_NAMES]#Do not change the order of this. Incase an extra parrameter is added add it to the end.
 
@@ -14,7 +14,7 @@ CHOICES = [DATABASE_COMPONENTS, SERVER_NAMES]#Do not change the order of this. I
 PXE_HA_COMPONENTS =  [["database-connector",PXE_HA_DATABASE_CONNECTOR_VERSION],["helloworld-process",PXE_HA_HELLOWORLD_VERSION],["jdbc-connector", PXE_HA_JDBC_CONNECTOR_VERSION],["registry",PXE_HA_REGISTRY_VERSION],["tempo-pxe-integration",TEMPO_PXE_HA_INTEGRATION_VERSION], ["workflow-processes", PXE_HA_PROCESSES_VERSION]]
 AXIS2_COMPONENTS_EE = [["deploy-ws-service",AXIS2SERVICES_DEPLOY_WS_VERSION], ["tempo-tms-common", TEMPO_VERSION],["tempo-tms-service", TEMPO_VERSION],["tempo-tas-service-with-alfresco", TEMPO_TAS_SERVICE_WITH_ALFRESCO_VERSION], ["security-ws-service", INTALIO_SECURITY_VERSION],["bam-service", BAM_SERVICE_VERSION]]
 COMPONENTS_EE = [["bpms-dashboard",BPMS_DASHBOARD_VERSION, ""], ["pxe-ha", PXE_HA_VERSION,PXE_HA_COMPONENTS], ["bpms-console", BPMS_CONSOLE_VERSION, ""], ["bpms-adhocreport", BPMS_ADHOCREPORT_VERSION, ""], ["collaboration",COLLABORATION_VERSION,""], ["mobi", MOBI_VERSION, ""], ["ode-validator", ODE_VALIDATOR_VERSION,""], ["axis2-services", AXIS2SERVICES_DEPLOY_WS_VERSION, AXIS2_COMPONENTS_EE], ["webreport", WEBREPORT_VERSION,""],["gi-webapp", GI_WEBAPP_VERSION,""],["wsi", WSI_VERSION,""],["ui-fw", UIFW_VERSION, ""],["wds", WDS_VERSION, ""], ["bre", "", BRE_COMPONENTS],["apacheds-webapp", APACHEDS_WEBAPP_VERSION,""],["cas-webapp", CAS_WEBAPP_VERSION, ""],["server-common", "", ""],["tmp-process-handler", TMP_PROCESS_HANDLER_VERSION, TMP_PROCESS_HANDLER_COMPONENT], ["social", SOCIAL_VERSION, ""], ["consolidation", INTALIO_VERSION, ""]]
-DATABASE_COMPONENTS_EE = [["oracle",ORACLE_VERSION],["postgres", POSTGRES_VERSION],["db2", DB2_VERSION],["derby", DERBY_VER],["sqlserver", SQLSERVER_VERSION],["mysql", MYSQL_VERSION],["sybase", SYBASE_VERSION],["ingres", INGRES_VERSION]]
+DATABASE_COMPONENTS_EE = [["oracle",ORACLE_VERSION],["postgres", POSTGRES_VERSION],["db2", DB2_VERSION],["h2", H2_VER],["sqlserver", SQLSERVER_VERSION],["mysql", MYSQL_VERSION],["sybase", SYBASE_VERSION],["ingres", INGRES_VERSION]]
 SERVER_NAMES_EE =[["geronimo",""],["tomcat-5", TOMCAT_5_VERSION],["tomcat-6",TOMCAT_6_VERSION], ["tomcat-7",TOMCAT_7_VERSION],["jboss",JBOSS_VERSION],["jboss43",JBOSS43_VERSION],["jboss43ear",""],["jboss61ear",""],["jboss7",JBOSS7_VERSION],["weblogic9",""],["weblogic10",""],["jetty9",JETTY9_VERSION],["jbosseap6",JBOSSEAP6_VERSION], ["intalio","war"], ["tomcatconfig", "7.5.0"], ["jbossconfig", "7.5.0"]]
 CHOICES_EE = [DATABASE_COMPONENTS_EE, SERVER_NAMES_EE]#Do not change the order of this. Incase an extra parrameter is added add it to the end.
 
@@ -227,6 +227,8 @@ TOMCAT_6 = "org.apache.tomcat:apache-tomcat:zip:#{TOMCAT_6_VERSION}"
 TOMCAT_7 = "org.apache.tomcat:apache-tomcat:zip:#{TOMCAT_7_VERSION}"
 TOMCAT_DERBY="com.intalio.bpms.derby:derby-tomcat-resource:jar:#{
 BPMS_DERBY_TOMCAT_VERSION}"
+TOMCAT_H2="com.intalio.bpms.h2database:h2-tomcat-resource:jar:#{
+BPMS_H2_TOMCAT_VERSION}"
 TOMCAT_JULI = { 
   :adapters => "org.apache.tomcat.extras:tomcat-extras-juli-adapters:jar:#{TOMCAT_7_VERSION}", 
   :core =>     "org.apache.tomcat:tomcat-juli:jar:#{TOMCAT_7_VERSION}" }
