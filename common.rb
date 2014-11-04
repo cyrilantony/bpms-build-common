@@ -24,6 +24,14 @@ APACHE_DERBY_CLIENT = "org.apache.derby:derbyclient:jar:#{DERBY_VER}"
 APACHE_DS = "org.apache.apacheds:noarch-installer:jar:1.5.1a"
 APACHE_DS_DEPS = "org.apache.apacheds:apacheds-deps:jar:1.5.4"
 
+GUAVA_CACHE = "com.google.guava:guava:jar:13.0.1"
+NATIVE_PLATFORM = "net.java.dev.jna:platform:jar:3.5.0"
+JNA = "net.java.dev.jna:jna:jar:3.5.0"
+WAFFLE = {
+  :jna => "com.github.dblock.waffle:waffle-jna:jar:1.5",
+  :tomcat7 => "com.github.dblock.waffle:waffle-tomcat7:jar:1.5"
+}
+
 APACHE_MIME4J = "org.apache.james:apache-mime4j-core:jar:0.7.2"
 
 ASM_32 = "asm:asm:jar:3.2"

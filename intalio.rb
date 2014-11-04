@@ -131,6 +131,20 @@ SPRING_ETC_324 = ["org.springframework:spring-core:jar:#{SPRING_VERSION_324}",
             "org.springframework:spring-jdbc:jar:#{SPRING_VERSION_324}",
             "org.springframework:spring-test:jar:#{SPRING_VERSION_324}"
              ]
+SPRING_4 = ["org.springframework:spring-core:jar:4.1.1.RELEASE",
+            "org.springframework:spring-context:jar:4.1.1.RELEASE",
+            "org.springframework:spring-beans:jar:4.1.1.RELEASE",
+            "org.springframework:spring-web:jar:4.1.1.RELEASE",
+            "org.springframework:spring-webmvc:jar:4.1.1.RELEASE",
+            "org.springframework:spring-aop:jar:4.1.1.RELEASE",
+            "org.springframework:spring-jdbc:jar:4.1.1.RELEASE",
+            "org.springframework:spring-tx:jar:4.1.1.RELEASE",
+            "org.springframework:spring-orm:jar:4.1.1.RELEASE",
+            "org.springframework:spring-expression:jar:4.1.1.RELEASE",
+            "org.springframework:spring-oxm:jar:4.1.1.RELEASE",
+            "org.springframework:spring-asm:jar:3.1.4.RELEASE"
+            ]
+
 SPRING_AOP = ["aopalliance:aopalliance:jar:1.0",
                "org.springframework:spring-aop:jar:#{SPRING_VERSION}"]
 SPRING_AOP_324 = ["aopalliance:aopalliance:jar:1.0",
@@ -214,7 +228,6 @@ PXE_HIBERNATE = ["javassist:javassist:jar:3.12.0.GA",
                  "net.sf.ehcache:ehcache:jar:1.2.3",
                  "org.hibernate:hibernate-validator:jar:3.1.0.GA"]
 
-GUAVA_CACHE="com.google.guava:guava:jar:13.0"
 MYSQL_DRIVER = "mysql:mysql-connector:jar:#{MYSQL_VERSION}"
 SQLSERVER_DRIVER = "microsoft:sqljdbc:jar:#{SQLSERVER_VERSION}"
 INGRES_DRIVER = "com.ingres.jdbc:iijdbc:jar:#{INGRES_VERSION}"
