@@ -232,7 +232,7 @@ MYSQL_DRIVER = "mysql:mysql-connector:jar:#{MYSQL_VERSION}"
 SQLSERVER_DRIVER = "microsoft:sqljdbc:jar:#{SQLSERVER_VERSION}"
 INGRES_DRIVER = "com.ingres.jdbc:iijdbc:jar:#{INGRES_VERSION}"
 SYBASE_DRIVER = "sybase:jconnect:jar:#{SYBASE_VERSION}"
-ORACLE_DRIVER = "oracle.jdbc:oracle-jdbc:jar:#{ORACLE_VERSION}"
+ORACLE_DRIVER = "oracle.jdbc:ojdbc:jar:#{ORACLE_VERSION}"
 JTDS_DRIVER="net.sourceforge.jtds:jtds:jar:#{JTDS_VERSION}"
 
 TOMCAT_5 = "org.apache.tomcat:apache-tomcat:zip:#{TOMCAT_5_VERSION}"
