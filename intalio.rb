@@ -240,8 +240,8 @@ TOMCAT_6 = "org.apache.tomcat:apache-tomcat:zip:#{TOMCAT_6_VERSION}"
 TOMCAT_7 = "org.apache.tomcat:tomcat:zip:#{TOMCAT_7_VERSION}"
 TOMCAT_DERBY="com.intalio.bpms.derby:derby-tomcat-resource:jar:#{
 BPMS_DERBY_TOMCAT_VERSION}"
-TOMCAT_H2="com.intalio.bpms.h2database:h2-tomcat-resource:jar:#{
-BPMS_H2_TOMCAT_VERSION}"
+SERVER_H2="com.intalio.bpms.h2database:h2-server-resource:jar:#{
+BPMS_H2_SERVER_VERSION}"
 TOMCAT_JULI = { 
   :adapters => "org.apache.tomcat.extras:tomcat-extras-juli-adapters:jar:#{TOMCAT_7_VERSION}", 
   :core =>     "org.apache.tomcat:tomcat-juli:jar:#{TOMCAT_7_VERSION}" }
