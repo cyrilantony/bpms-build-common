@@ -38,6 +38,8 @@ ASM_32 = "asm:asm:jar:3.2"
 
 H2_DB = "com.h2database:h2:jar:#{H2_VER}"
 
+DB_TEST_H2 = "com.h2database:h2:jar:1.1.117"
+
 ASPECTJ = {
 :rt => "org.aspectj:aspectjrt:jar:1.6.12",
 :weaver => "org.aspectj:aspectjweaver:jar:1.6.12" 
