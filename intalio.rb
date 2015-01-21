@@ -85,8 +85,8 @@ BIRT_WAR  = "org.eclipse.birt:birt-webapp:war:#{BIRT_VERSION}"
 BIRT_WAR_ARTIFACT  = artifact(BIRT_WAR)
 
 BTM = {
-  :core => "org.codehaus.btm:btm:jar:2.1.3", 
-  :tomcatlifecycle => "org.codehaus.btm:btm-tomcat55-lifecycle:jar:2.1.3" 
+  :core => "org.codehaus.btm:btm:jar:2.1.4",
+  :tomcatlifecycle => "org.codehaus.btm:btm-tomcat55-lifecycle:jar:2.1.4"
 }
 CGLIB_NODEP="cglib:cglib-nodep:jar:2.2.2"
 DB2_DRIVER = "db2:jcc:jar:#{DB2_VERSION}"
