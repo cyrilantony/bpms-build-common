@@ -219,7 +219,7 @@ CONNECTOR_JDBC_CORE = "com.intalio.bpms.connectors:com.intalio.bpms.connectors-j
 PXE_HIBERNATE = ["javassist:javassist:jar:3.12.0.GA",
                  "org.hibernate:hibernate-commons-annotations:jar:3.2.0.Final",
                  "org.hibernate.javax.persistence:hibernate-jpa-2.0-api:jar:1.0.1.Final",
-                 "org.hibernate:hibernate-core:jar:3.6.9.Final",
+                 "org.intalio.hibernate:hibernate-core-custom:jar:3.6.9.Final",
                  "asm:asm:jar:3.2",
                  "org.hibernate:hibernate-entitymanager:jar:3.6.9.Final",
                  #"org.hibernate:hibernate-annotations:jar:3.5.6-Final",
