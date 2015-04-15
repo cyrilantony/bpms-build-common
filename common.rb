@@ -37,6 +37,7 @@ APACHE_MIME4J = "org.apache.james:apache-mime4j-core:jar:0.7.2"
 ASM_32 = "asm:asm:jar:3.2"
 
 H2_DB = "com.h2database:h2:jar:#{H2_VER}"
+COMMONS_MATH = "org.apache.commons:commons-math3:jar:#{MATH_VER}"
 
 DB_TEST_H2 = "com.h2database:h2:jar:1.1.117"
 
