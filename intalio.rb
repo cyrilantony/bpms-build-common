@@ -414,3 +414,5 @@ TEMPO_COMMON = TEMPO[:tmscommon]
 TMP_CLIENT=["org.intalio.tempo.workflow.tmp:tmp-client:jar:#{TMP_CLIENT_VERSION}"]
 JSON_JAVA="org.json:json:jar:20090211"
 JETTISON = "org.codehaus.jettison:jettison:jar:1.2"
+
+SHAREPOINT_CONNECTOR_ATTACHMENT = "com.intalio.tempo:sharepoint-connector-attachment:jar:#{SHAREPOINT_ATTACHMENT_VERSION}";
