@@ -394,6 +394,11 @@ HTTP_CLIENT_411 = ["org.apache.httpcomponents:httpclient:jar:4.1.1",
                "org.apache.httpcomponents:httpcore:jar:4.1.1",
                "org.apache.httpcomponents:httpcore-nio:jar:4.1.1"]
 
+HTTP_CLIENT_441 = ["org.apache.httpcomponents:httpclient:jar:4.4.1",
+               "org.apache.httpcomponents:httpclient-cache:jar:4.4.1",
+               "org.apache.httpcomponents:httpcore:jar:4.4.1",
+               "org.apache.httpcomponents:httpcore-nio:jar:4.4.1"]
+
 # the list of dependencies below has been generated
 ORBEON_LIBS = ["orbeon:activation-1_0_2:jar:3.8.0.201005141856-CE",
 "orbeon:ant-1_6_5:jar:3.8.0.201005141856-CE",
