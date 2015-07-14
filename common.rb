@@ -55,7 +55,7 @@ CASTOR_CODEHAUS = {
   :xmlschema => "org.codehaus.castor:castor-xml-schema:jar:1.2"
   }
 CAS_CLIENT = "cas:casclient:jar:2.1.1"
-CSV = "org.ostermiller:utils:jar:1.07.00"
+CSV = "org.apache.commons:commons-csv:jar:1.1"
 DB_CONNECTOR = {
   :db2 => "com.ibm.db2.jcc:jcc4:jar:#{DB2_VERSION}",
   :mysql => "mysql:mysql-connector-java:jar:#{MYSQL_VERSION}",
