@@ -505,3 +505,4 @@ JODATIME,
 "org.opensaml:opensaml:jar:2.5.1-1",
 "org.opensaml:openws:jar:1.4.2-1"
 ]
+JCIFS = "jcifs:jcifs:jar:1.3.17"
