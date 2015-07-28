@@ -506,3 +506,8 @@ JODATIME,
 "org.opensaml:openws:jar:1.4.2-1"
 ]
 JCIFS = "jcifs:jcifs:jar:1.3.17"
+
+VELOCITY = "org.apache.velocity:velocity:jar:1.7"
+ITEXT_556 = "com.itextpdf:itextpdf:jar:5.5.6"
+XMLWORKER = "com.itextpdf.tool:xmlworker:jar:5.5.6"
+JTIDY_R938 = "net.sf.jtidy:jtidy:jar:r938"
