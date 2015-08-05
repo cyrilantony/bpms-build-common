@@ -1,3 +1,3 @@
-repositories.release_to[:username] ||= "ubuntu"
-repositories.release_to[:url] ||= "sftp://www.intalio.org/var/www-org/public/maven2"
-repositories.release_to[:permissions] ||= 0664
+repositories.release_to[:username] ||= "intalio"
+repositories.release_to[:password] ||= "intalio321"
+repositories.release_to[:url] ||= "sftp://intalio@bpms-build-blr.local/media/disk1/repository"
