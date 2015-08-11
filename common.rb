@@ -511,3 +511,13 @@ VELOCITY = "org.apache.velocity:velocity:jar:1.7"
 ITEXT_556 = "com.itextpdf:itextpdf:jar:5.5.6"
 XMLWORKER = "com.itextpdf.tool:xmlworker:jar:5.5.6"
 JTIDY_R938 = "net.sf.jtidy:jtidy:jar:r938"
+
+MOCKITO = "org.mockito:mockito-all:jar:1.10.19"
+POWERMOCK = {
+:mockito_api => "org.powermock:powermock-api-mockito:jar:1.6.2",
+:reflect => "org.powermock:powermock-reflect:jar:1.6.2",
+:junit => "org.powermock:powermock-module-junit4:jar:1.6.2",
+:api_support => "org.powermock:powermock-api-support:jar:1.6.2",
+:junit_common => "org.powermock:powermock-module-junit4-common:jar:1.6.2",
+:core => "org.powermock:powermock-core:jar:1.6.2"
+}
