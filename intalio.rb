@@ -194,7 +194,6 @@ AXIS2_MODULE_LIBS = ["org.apache.ws.security:wss4j:jar:1.6.4",
            "org.opensaml:opensaml:jar:2.5.1-1",
            "bouncycastle:bcprov-jdk15:jar:140",
            "org.opensaml:xmltooling:jar:1.3.2-1",
-           "org.apache.velocity:velocity:jar:1.5",
            "org.opensaml:openws:jar:1.4.2-1",
            "org.owasp.esapi:esapi:jar:2.0GA",
            "joda-time:joda-time:jar:1.6.2"]

@@ -499,7 +499,6 @@ OPENSAML = [
 APACHE_COMMONS[:collections],
 APACHE_COMMONS[:lang],
 JODATIME,
-"velocity:velocity:jar:1.5",
 "org.opensaml:xmltooling:jar:1.3.1",
 "xml-security:xmlsec:jar:1.4.0",
 "org.opensaml:opensaml:jar:2.5.1-1",
