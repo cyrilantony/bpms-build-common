@@ -508,7 +508,10 @@ JCIFS = "jcifs:jcifs:jar:1.3.17"
 
 VELOCITY = "org.apache.velocity:velocity:jar:1.7"
 LOWAGIE_ITEXT = "com.lowagie.text:com.lowagie.text:jar:2.1.7.v201004222200"
-FLYING_SAUCER="org.xhtmlrenderer:flying-saucer-pdf:jar:9.0.7"
+FLYING_SAUCER = {
+:pdf=>"org.xhtmlrenderer:flying-saucer-pdf:jar:9.0.7",
+:core=>"org.xhtmlrenderer:flying-saucer-core:jar:9.0.7",
+}
 TIDY="org.eclipse.birt.runtime.3_7_1:Tidy:jar:1"
 
 MOCKITO = "org.mockito:mockito-all:jar:1.10.19"
