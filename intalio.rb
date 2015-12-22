@@ -418,4 +418,4 @@ JETTISON = "org.codehaus.jettison:jettison:jar:1.2"
 
 SHAREPOINT_CONNECTOR_ATTACHMENT = "com.intalio.tempo:sharepoint-connector-attachment:jar:#{SHAREPOINT_ATTACHMENT_VERSION}";
 BPMN2_LIBS = ["org.eclipse:org.eclipse.bpmn2:jar:0.7.0.20100826221953"]
-OSGI = "org.eclipse:osgi:jar:3.5.0.v20090520"
+OSGI = "org.eclipse:osgi:jar:3.5.0.v20090520"
