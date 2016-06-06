@@ -161,6 +161,22 @@ SPRING = {
   :mock =>  "org.springframework:spring-test:jar:2.5.5",
   :test => "org.springframework:spring-test:jar:2.5.6"
 }
+
+SPRING_LIBS = {
+            :core => "org.springframework:spring-core:jar:#{SPRING_VERSION}",
+            :context => "org.springframework:spring-context:jar:#{SPRING_VERSION}",
+            :beans => "org.springframework:spring-beans:jar:#{SPRING_VERSION}",
+            :web => "org.springframework:spring-web:jar:#{SPRING_VERSION}",
+            :webmvc => "org.springframework:spring-webmvc:jar:#{SPRING_VERSION}",
+            :aop => "org.springframework:spring-aop:jar:#{SPRING_VERSION}",
+            :jdbc => "org.springframework:spring-jdbc:jar:#{SPRING_VERSION}",
+            :tx => "org.springframework:spring-tx:jar:#{SPRING_VERSION}",
+            :orm => "org.springframework:spring-orm:jar:#{SPRING_VERSION}",
+            :expression => "org.springframework:spring-expression:jar:#{SPRING_VERSION}",
+            :oxm => "org.springframework:spring-oxm:jar:#{SPRING_VERSION}",
+            :webmvc_portlet => "org.springframework:spring-webmvc-portlet:jar:#{SPRING_VERSION}",
+}
+
 TAGLIBS = [ "taglibs:standard:jar:1.1.2" ]
 URLREWRITE = "org.tuckey:urlrewritefilter:jar:4.0.4"
 
@@ -522,4 +538,10 @@ POWERMOCK = {
 :api_support => "org.powermock:powermock-api-support:jar:1.6.2",
 :junit_common => "org.powermock:powermock-module-junit4-common:jar:1.6.2",
 :core => "org.powermock:powermock-core:jar:1.6.2"
+}
+
+JACKSON_274 = {
+:core => "com.fasterxml.jackson.core:jackson-core:jar:2.7.4",
+:databind => "com.fasterxml.jackson.core:jackson-databind:jar:2.7.4",
+:annotations => "com.fasterxml.jackson.core:jackson-annotations:jar:2.7.4"
 }

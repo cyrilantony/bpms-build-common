@@ -123,7 +123,7 @@ SPRING_ETC = ["org.springframework:spring-core:jar:#{SPRING_VERSION}",
             "org.springframework:spring-tx:jar:#{SPRING_VERSION}",
             "org.springframework:spring-jdbc:jar:#{SPRING_VERSION}",
             "org.springframework:spring-test:jar:#{SPRING_VERSION}",
-            "org.springframework:spring-asm:jar:#{SPRING_VERSION}"
+            "org.springframework:spring-oxm:jar:#{SPRING_VERSION}"
              ]
 SPRING_ETC_324 = ["org.springframework:spring-core:jar:#{SPRING_VERSION_324}",
             "org.springframework:spring-webmvc:jar:#{SPRING_VERSION_324}",
@@ -149,6 +149,9 @@ SPRING_4 = ["org.springframework:spring-core:jar:4.1.1.RELEASE",
             "org.springframework:spring-oxm:jar:4.1.1.RELEASE",
             "org.springframework:spring-asm:jar:3.1.4.RELEASE"
             ]
+
+
+
 
 SPRING_AOP = ["aopalliance:aopalliance:jar:1.0",
                "org.springframework:spring-aop:jar:#{SPRING_VERSION}"]
