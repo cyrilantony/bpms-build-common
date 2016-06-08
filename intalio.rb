@@ -15,7 +15,7 @@ PXE_HA_COMPONENTS =  [["database-connector",PXE_HA_DATABASE_CONNECTOR_VERSION],[
 AXIS2_COMPONENTS_EE = [["deploy-ws-service",AXIS2SERVICES_DEPLOY_WS_VERSION], ["tempo-tms-common", TEMPO_VERSION],["tempo-tms-service", TEMPO_VERSION],["tempo-tas-service-with-alfresco", TEMPO_TAS_SERVICE_WITH_ALFRESCO_VERSION], ["security-ws-service", INTALIO_SECURITY_VERSION],["bam-service", BAM_SERVICE_VERSION]]
 COMPONENTS_EE = [["bpms-dashboard",BPMS_DASHBOARD_VERSION, ""], ["pxe-ha", PXE_HA_VERSION,PXE_HA_COMPONENTS], ["bpms-console", BPMS_CONSOLE_VERSION, ""], ["bpms-analytics", BPMS_ANALYTICS_VERSION, ""], ["bpms-pdfgen", BPMS_PDFGEN_VERSION, ""], ["bpms-webmodeler", BPMS_WEBMODELER_VERSION, ""], ["bpms-adhocreport", BPMS_ADHOCREPORT_VERSION, ""], ["collaboration",COLLABORATION_VERSION,""], ["mobi", MOBI_VERSION, ""], ["ode-validator", ODE_VALIDATOR_VERSION,""], ["axis2-services", AXIS2SERVICES_DEPLOY_WS_VERSION, AXIS2_COMPONENTS_EE], ["webreport", WEBREPORT_VERSION,""],["gi-webapp", GI_WEBAPP_VERSION,""],["wsi", WSI_VERSION,""],["ui-fw", UIFW_VERSION, ""],["wds", WDS_VERSION, ""], ["bre", "", BRE_COMPONENTS],["apacheds-webapp", APACHEDS_WEBAPP_VERSION,""],["cas-webapp", CAS_WEBAPP_VERSION, ""],["server-common", "", ""],["tmp-process-handler", TMP_PROCESS_HANDLER_VERSION, TMP_PROCESS_HANDLER_COMPONENT], ["social", SOCIAL_VERSION, ""], ["consolidation", INTALIO_VERSION, ""]]
 DATABASE_COMPONENTS_EE = [["oracle",ORACLE_VERSION],["postgres", POSTGRES_VERSION],["db2", DB2_VERSION],["h2", H2_VER],["sqlserver", SQLSERVER_VERSION],["mysql", MYSQL_VERSION],["sybase", SYBASE_VERSION],["ingres", INGRES_VERSION]]
-SERVER_NAMES_EE =[["geronimo",""],["tomcat-5", TOMCAT_5_VERSION],["tomcat-6",TOMCAT_6_VERSION], ["tomcat-7",TOMCAT_7_VERSION],["jboss",JBOSS_VERSION],["jboss43",JBOSS43_VERSION],["jboss43ear",""],["jboss61ear",""],["jboss7",JBOSS7_VERSION],["weblogic9",""],["weblogic10",""],["jetty9",JETTY9_VERSION],["jbosseap6",JBOSSEAP6_VERSION], ["intalio","war"], ["tomcatconfig", INTALIO_VERSION], ["jbossconfig", INTALIO_VERSION]]
+SERVER_NAMES_EE =[["geronimo",""],["tomcat-5", TOMCAT_5_VERSION],["tomcat-6",TOMCAT_6_VERSION], ["tomcat-7",TOMCAT_7_VERSION],["tomcat-8","TOMCAT_8_VERSION"],["jboss",JBOSS_VERSION],["jboss43",JBOSS43_VERSION],["jboss43ear",""],["jboss61ear",""],["jboss7",JBOSS7_VERSION],["weblogic9",""],["weblogic10",""],["jetty9",JETTY9_VERSION],["jbosseap6",JBOSSEAP6_VERSION], ["intalio","war"], ["tomcatconfig", INTALIO_VERSION], ["jbossconfig", INTALIO_VERSION]]
 CHOICES_EE = [DATABASE_COMPONENTS_EE, SERVER_NAMES_EE]#Do not change the order of this. Incase an extra parrameter is added add it to the end.
 
 CHOICE_NAMES = ["database", "server"] #Do not change the order of this. Incase an extra parrameter is added add it to the end.
@@ -244,13 +244,14 @@ JTDS_DRIVER="net.sourceforge.jtds:jtds:jar:#{JTDS_VERSION}"
 TOMCAT_5 = "org.apache.tomcat:apache-tomcat:zip:#{TOMCAT_5_VERSION}"
 TOMCAT_6 = "org.apache.tomcat:apache-tomcat:zip:#{TOMCAT_6_VERSION}"
 TOMCAT_7 = "org.apache.tomcat:tomcat:zip:#{TOMCAT_7_VERSION}"
+TOMCAT_8 = "org.apache.tomcat:tomcat:zip:#{TOMCAT_8_VERSION}"
 TOMCAT_DERBY="com.intalio.bpms.derby:derby-tomcat-resource:jar:#{
 BPMS_DERBY_TOMCAT_VERSION}"
 SERVER_H2="com.intalio.bpms.h2database:h2-server-resource:jar:#{
 BPMS_H2_SERVER_VERSION}"
 TOMCAT_JULI = { 
-  :adapters => "org.apache.tomcat.extras:tomcat-extras-juli-adapters:jar:#{TOMCAT_7_VERSION}", 
-  :core =>     "org.apache.tomcat:tomcat-juli:jar:#{TOMCAT_7_VERSION}" }
+  :adapters => "org.apache.tomcat.extras:tomcat-extras-juli-adapters:jar:#{TOMCAT_8_VERSION}", 
+  :core =>     "org.apache.tomcat:tomcat-juli:jar:#{TOMCAT_8_VERSION}" }
 NET_SF_CLICK = "net.sf.click:click:jar:0.17"
 TRANQL = [ "tranql:tranql-connector:jar:1.1", APACHE_COMMONS[:primitives] ]
 SERVICEMIX  = [  group("servicemix-core", :under=>"org.apache.servicemix", :version=>"3.3"),  
