@@ -15,3 +15,5 @@ repositories.remote << "http://svn.apache.org/repos/asf/servicemix/m2-repo"
 repositories.remote << "http://repo.springsource.org/release"
 repositories.remote << "http://repository.jboss.com/maven2/"
 repositories.remote << "http://www.soapui.org/repository/maven2"
+repositories.remote << "http://mvnrepository.com"
+
