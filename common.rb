@@ -4,12 +4,12 @@ APACHE_COMMONS = {
   :beanutils => "commons-beanutils:commons-beanutils:jar:1.8.3",
   :cli => "commons-cli:commons-cli:jar:1.1",
   :codec => "commons-codec:commons-codec:jar:1.3",
-  :collections => "commons-collections:commons-collections:jar:3.2", 
+  :collections => "commons-collections:commons-collections:jar:3.2.2",
   :daemon => "commons-daemon:commons-daemon:jar:1.0.1", 
   :dbcp => "commons-dbcp:commons-dbcp:jar:1.2.2",
   :digester => "commons-digester:commons-digester:jar:1.7",
   :discovery => "commons-discovery:commons-discovery:jar:0.2",
-  :fileupload => "commons-fileupload:commons-fileupload:jar:1.2.1",
+  :fileupload => "commons-fileupload:commons-fileupload:jar:1.3.2",
   :httpclient => "commons-httpclient:commons-httpclient:jar:3.1",
   :io => "commons-io:commons-io:jar:2.4",
   :lang => "commons-lang:commons-lang:jar:2.4",
@@ -184,7 +184,7 @@ WOODSTOX = [ "woodstox:wstx-asl:jar:3.2.4" ]
 WSDL4J = [ "wsdl4j:wsdl4j:jar:1.6.3" ]
 XMLSCHEMA = [ "org.apache.ws.commons.schema:XmlSchema:jar:1.4.3" ]
 WS_COMMONS_SCHEMA = XMLSCHEMA
-XERCES = {:impl => "xerces:xercesImpl:jar:2.9.1" , :parserapi => "xerces:xmlParserAPIs:jar:2.9.0" }
+XERCES = {:impl => "xerces:xercesImpl:jar:2.11.0" , :parserapi => "xerces:xmlParserAPIs:jar:2.9.0" }
 XMLBEANS = { :xbean=> "xmlbeans:xbean:jar:2.3.0",:xmlbeans=>"org.apache.xmlbeans:xmlbeans:jar:2.4.0",:xmlpublic=>"xmlbeans:xmlpublic:jar:2.3.0",:xbeanpath=>"xmlbeans:xbean_xpath:jar:2.3.0"}
 XMLUNIT = ["xmlunit:xmlunit:jar:1.1"]
 
@@ -203,7 +203,7 @@ PLUTO = [
   PLUTO_TAGLIB,
   PLUTO_DRIVER
 ]
-XALAN = ["xalan:xalan:jar:2.7.1", "xalan:serializer:jar:2.7.1"]
+XALAN = ["xalan:xalan:jar:2.7.2", "xalan:serializer:jar:2.7.2"]
 PLUTO_DEPLOY = [
   PLUTO_CONTAINER,
   PLUTO_TAGLIB,
