@@ -184,7 +184,7 @@ WOODSTOX = [ "woodstox:wstx-asl:jar:3.2.4" ]
 WSDL4J = [ "wsdl4j:wsdl4j:jar:1.6.3" ]
 XMLSCHEMA = [ "org.apache.ws.commons.schema:XmlSchema:jar:1.4.3" ]
 WS_COMMONS_SCHEMA = XMLSCHEMA
-XERCES = {:impl => "xerces:xercesImpl:jar:2.11.0" , :parserapi => "xerces:xmlParserAPIs:jar:2.9.0" }
+XERCES = {:impl => "xerces:xercesImpl:jar:2.9.1" , :parserapi => "xerces:xmlParserAPIs:jar:2.9.0" }
 XMLBEANS = { :xbean=> "xmlbeans:xbean:jar:2.3.0",:xmlbeans=>"org.apache.xmlbeans:xmlbeans:jar:2.4.0",:xmlpublic=>"xmlbeans:xmlpublic:jar:2.3.0",:xbeanpath=>"xmlbeans:xbean_xpath:jar:2.3.0"}
 XMLUNIT = ["xmlunit:xmlunit:jar:1.1"]
 
