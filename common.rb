@@ -51,8 +51,9 @@ BPMS_COMMON = ["com.intalio.bpms.common:bpms-common:jar:#{BPMS_COMMON_VERSION}"]
 BPMS_UTILS = ["com.intalio.bpms.common:bpms-utils:jar:#{BPMS_COMMON_VERSION}"]
 CASTOR = "castor:castor:jar:1.0"
 CASTOR_CODEHAUS = {
-  :base => "org.codehaus.castor:castor:jar:1.2",
-  :xmlschema => "org.codehaus.castor:castor-xml-schema:jar:1.2"
+  :core => "org.codehaus.castor:castor-core:jar:1.3.2",
+  :xml => "org.codehaus.castor:castor-xml:jar:1.3.2",
+  :xmlschema => "org.codehaus.castor:castor-xml-schema-et:jar:1.3.2"
   }
 CAS_CLIENT = "cas:casclient:jar:2.1.1"
 CSV = "org.apache.commons:commons-csv:jar:1.1"
