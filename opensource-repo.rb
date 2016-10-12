@@ -1,5 +1,5 @@
-repositories.remote << "http://bpms-build-blr.india.everteam.com:8081/nexus/content/repositories/m2repo"
-repositories.remote << "http://bpms-build-blr.india.everteam.com:8081/nexus/content/repositories/snapshots"
+repositories.remote << "http://bpms-build.cloud.everteam.com:8081/nexus/content/repositories/m2repo"
+repositories.remote << "http://bpms-build.cloud.everteam.com:8081/nexus/content/repositories/snapshots"
 repositories.remote << "http://www.intalio.org/public/maven2"
 repositories.remote <<  "http://dist.codehaus.org/mule/dependencies/maven2/"
 repositories.remote <<  "http://repo1.maven.org/maven2"

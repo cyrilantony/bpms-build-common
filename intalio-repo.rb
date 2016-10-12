@@ -1,5 +1,5 @@
-repositories.remote << "http://bpms-build-blr.india.everteam.com:8081/nexus/content/repositories/m2repo"
-repositories.remote << "http://bpms-build-blr.india.everteam.com:8081/nexus/content/repositories/snapshots"
+repositories.remote << "http://bpms-build.cloud.everteam.com:8081/nexus/content/repositories/m2repo"
+repositories.remote << "http://bpms-build.cloud.everteam.com:8081/nexus/content/repositories/snapshots"
 repositories.remote << "http://release.intalio.com/m2repo/"
 repositories.remote << "http://10.10.2.106:8081/nexus/content/repositories/intalio/"
 repositories.remote << "http://release.intalio.com:9082/nexus/content/repositories/m2repo/"
