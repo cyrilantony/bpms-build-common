@@ -542,7 +542,9 @@ POWERMOCK = {
 }
 
 JACKSON_274 = {
-:core => "com.fasterxml.jackson.core:jackson-core:jar:2.7.4",
-:databind => "com.fasterxml.jackson.core:jackson-databind:jar:2.7.4",
-:annotations => "com.fasterxml.jackson.core:jackson-annotations:jar:2.7.4"
+:core => "com.fasterxml.jackson.core:jackson-core:jar:2.8.6",
+:databind => "com.fasterxml.jackson.core:jackson-databind:jar:2.8.6",
+:annotations => "com.fasterxml.jackson.core:jackson-annotations:jar:2.8.6"
 }
+
+JJWT = "io.jsonwebtoken:jjwt:jar:0.7.0"
