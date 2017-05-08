@@ -551,3 +551,25 @@ JACKSON_274 = {
 }
 
 JJWT = "io.jsonwebtoken:jjwt:jar:0.7.0"
+
+VALIDATION_API="javax.validation:validation-api:jar:1.1.0.Final"
+SPRINGFOX = {
+:core => "io.springfox:springfox-core:jar:2.5.0",
+:spi => "io.springfox:springfox-spi:jar:2.5.0",
+:schema => "io.springfox:springfox-schema:jar:2.5.0",
+:swagger_common => "io.springfox:springfox-swagger-common:jar:2.5.0",
+:spring_web => "io.springfox:springfox-spring-web:jar:2.5.0",
+:swagger2 => "io.springfox:springfox-swagger2:jar:2.0.1"
+}
+SWAGGER = {
+:core => "io.swagger:swagger-annotations:jar:1.5.9"
+}
+GUAVA_18="com.google.guava:guava:jar:18.0"
+
+SPRING_PLUGIN = {
+:core => "org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE",
+:metadata => "org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE"
+}
+
+MONGO_DRIVER = "org.mongodb:mongo-java-driver:jar:3.2.2"
+FORCE_REST_API = "com.frejo:force-rest-api:jar:0.0.36"
