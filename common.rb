@@ -564,8 +564,6 @@ SPRINGFOX = {
 SWAGGER = {
 :core => "io.swagger:swagger-annotations:jar:1.5.9"
 }
-GUAVA_18="com.google.guava:guava:jar:18.0"
-
 SPRING_PLUGIN = {
 :core => "org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE",
 :metadata => "org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE"
