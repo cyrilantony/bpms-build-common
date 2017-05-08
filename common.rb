@@ -559,7 +559,7 @@ SPRINGFOX = {
 :schema => "io.springfox:springfox-schema:jar:2.5.0",
 :swagger_common => "io.springfox:springfox-swagger-common:jar:2.5.0",
 :spring_web => "io.springfox:springfox-spring-web:jar:2.5.0",
-:swagger2 => "io.springfox:springfox-swagger2:jar:2.0.1"
+:swagger2 => "io.springfox:springfox-swagger2:jar:2.5.0"
 }
 SWAGGER = {
 :core => "io.swagger:swagger-annotations:jar:1.5.9"
