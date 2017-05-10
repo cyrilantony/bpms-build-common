@@ -562,7 +562,7 @@ SPRINGFOX = {
 :swagger2 => "io.springfox:springfox-swagger2:jar:2.5.0"
 }
 SWAGGER = {
-:core => "io.swagger:swagger-annotations:jar:1.5.9"
+:annotations => "io.swagger:swagger-annotations:jar:1.5.9"
 }
 SPRING_PLUGIN = {
 :core => "org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE",
