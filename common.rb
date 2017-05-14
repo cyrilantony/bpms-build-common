@@ -27,7 +27,7 @@ APACHE_DERBY_CLIENT = "org.apache.derby:derbyclient:jar:#{DERBY_VER}"
 APACHE_DS = "org.apache.apacheds:noarch-installer:jar:1.5.1a"
 APACHE_DS_DEPS = "org.apache.apacheds:apacheds-deps:jar:1.5.4"
 
-GUAVA_CACHE = "com.google.guava:guava:jar:13.0.1"
+GUAVA_CACHE = "com.google.guava:guava:jar:18.0"
 NATIVE_PLATFORM = "net.java.dev.jna:platform:jar:3.5.0"
 JNA = "net.java.dev.jna:jna:jar:3.5.0"
 WAFFLE = {
@@ -558,16 +558,18 @@ SPRINGFOX = {
 :spi => "io.springfox:springfox-spi:jar:2.5.0",
 :schema => "io.springfox:springfox-schema:jar:2.5.0",
 :swagger_common => "io.springfox:springfox-swagger-common:jar:2.5.0",
+:swagger-ui => "io.springfox:springfox-swagger-ui:jar:2.5.0",
 :spring_web => "io.springfox:springfox-spring-web:jar:2.5.0",
 :swagger2 => "io.springfox:springfox-swagger2:jar:2.5.0"
 }
 SWAGGER = {
 :annotations => "io.swagger:swagger-annotations:jar:1.5.9"
+:models => "io.swagger:swagger-models:jar:1.5.9"
 }
 SPRING_PLUGIN = {
 :core => "org.springframework.plugin:spring-plugin-core:jar:1.2.0.RELEASE",
 :metadata => "org.springframework.plugin:spring-plugin-metadata:jar:1.2.0.RELEASE"
 }
-
+CLASSMATE = "com.fasterxml:classmate:jar:1.3.3"
 MONGO_DRIVER = "org.mongodb:mongo-java-driver:jar:3.2.2"
 FORCE_REST_API = "com.frejo:force-rest-api:jar:0.0.36"
