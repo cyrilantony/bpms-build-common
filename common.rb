@@ -558,7 +558,7 @@ SPRINGFOX = {
 :spi => "io.springfox:springfox-spi:jar:2.5.0",
 :schema => "io.springfox:springfox-schema:jar:2.5.0",
 :swagger_common => "io.springfox:springfox-swagger-common:jar:2.5.0",
-:swagger-ui => "io.springfox:springfox-swagger-ui:jar:2.5.0",
+:swagger_ui => "io.springfox:springfox-swagger-ui:jar:2.5.0",
 :spring_web => "io.springfox:springfox-spring-web:jar:2.5.0",
 :swagger2 => "io.springfox:springfox-swagger2:jar:2.5.0"
 }
